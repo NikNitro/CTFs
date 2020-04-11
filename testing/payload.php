@@ -1,2 +1,2 @@
 <?php echo '<p>Hello World</p>'; ?> 
-<?php echo 'Hola CaraCola'; ?> 
+<?php echo '<script>alert("XSS");</script>'; ?> 
