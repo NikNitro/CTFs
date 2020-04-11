@@ -1,5 +1,13 @@
 <?php echo '<p>Hello World</p>'; ?> 
-</pre>
+</pre>			</div>
+			<br>
+		
+		<br>
+		<div class="span4"></div>
+	</div>
+	</div>
+</body>
+</html>
 <?php echo '<p>Hello World</p>'; ?> 
 <?php echo 'scandir("/var/");'; ?> 
 <p><?php scandir('/home/'); ?> </p>
