@@ -1,0 +1,282 @@
+kali@kali:~/CTFs/library/Crypto/PadBuster$ perl padBuster.pl http://34.74.105.127/5d716a20a5/?post=YBkuIzsUkf/zl3PxNp95C8eUVZ4i+4lb7JOxO9VaN9tPFwjFlGP0Di4mr0htA+La2QYM9N7kO5ofsOOiUevFgxcwlWRxOdShHXbPHvLp0sdMF6ZPF+Zo0xU8bquZMlvx7AmS+ioFhbJv+/mdlaCrzyz7leLwyMKXthvCqi98xuL7JCEQ//0HBtVmhGUq0UCu14xNPc7st6NRp3mZc0CNjg YBkuIzsUkf/zl3PxNp95C8eUVZ4i+4lb7JOxO9VaN9tPFwjFlGP0Di4mr0htA+La2QYM9N7kO5ofsOOiUevFgxcwlWRxOdShHXbPHvLp0sdMF6ZPF+Zo0xU8bquZMlvx7AmS+ioFhbJv+/mdlaCrzyz7leLwyMKXthvCqi98xuL7JCEQ//0HBtVmhGUq0UCu14xNPc7st6NRp3mZc0CNjg 16
+
++-------------------------------------------+
+| PadBuster - v0.3.3                        |
+| Brian Holyfield - Gotham Digital Science  |
+| labs@gdssecurity.com                      |
++-------------------------------------------+
+
+INFO: The original request returned the following
+[+] Status: 200
+[+] Location: N/A
+[+] Content Length: 547
+
+INFO: Starting PadBuster Decrypt Mode
+*** Starting Block 1 of 9 ***
+
+INFO: No error string was provided...starting response analysis
+
+*** Response Analysis Complete ***
+
+The following response signatures were returned:
+
+-------------------------------------------------------
+ID#     Freq    Status  Length  Location
+-------------------------------------------------------
+1       1       200     423     N/A
+2 **    255     200     302     N/A
+-------------------------------------------------------
+
+Enter an ID that matches the error condition
+NOTE: The ID# marked with ** is recommended : 2
+
+Continuing test with selection 2
+
+[+] Success: (172/256) [Byte 16]
+[+] Success: (196/256) [Byte 15]
+[+] Success: (35/256) [Byte 14]
+[+] Success: (130/256) [Byte 13]
+[+] Success: (78/256) [Byte 12]
+[+] Success: (213/256) [Byte 11]
+[+] Success: (78/256) [Byte 10]
+[+] Success: (37/256) [Byte 9]
+[+] Success: (52/256) [Byte 8]
+[+] Success: (71/256) [Byte 7]
+[+] Success: (136/256) [Byte 6]
+[+] Success: (170/256) [Byte 5]
+[+] Success: (190/256) [Byte 4]
+[+] Success: (186/256) [Byte 3]
+[+] Success: (204/256) [Byte 2]
+[+] Success: (245/256) [Byte 1]
+
+Block 1 Results:
+[+] Cipher Text (HEX): c794559e22fb895bec93b13bd55a37db
+[+] Intermediate Bytes (HEX): 1b3b484f5a73b3c5d3b52db77ade3e55
+[+] Plain Text: {"flag": "^FLAG^
+
+Use of uninitialized value $plainTextBytes in concatenation (.) or string at padBuster.pl line 361, <STDIN> line 1.
+*** Starting Block 2 of 9 ***
+
+[+] Success: (17/256) [Byte 16]
+[+] Success: (243/256) [Byte 15]
+[+] Success: (149/256) [Byte 14]
+[+] Success: (29/256) [Byte 13]
+[+] Success: (241/256) [Byte 12]
+[+] Success: (124/256) [Byte 11]
+[+] Success: (91/256) [Byte 10]
+[+] Success: (41/256) [Byte 9]
+[+] Success: (157/256) [Byte 8]
+[+] Success: (27/256) [Byte 7]
+[+] Success: (59/256) [Byte 6]
+[+] Success: (230/256) [Byte 5]
+[+] Success: (89/256) [Byte 4]
+[+] Success: (158/256) [Byte 3]
+[+] Success: (84/256) [Byte 2]
+[+] Success: (17/256) [Byte 1]
+
+Block 2 Results:
+[+] Cipher Text (HEX): 4f1708c59463f40e2e26af486d03e2da
+[+] Intermediate Bytes (HEX): ffa36caa16ceef6adfa2820ae7680fee
+[+] Plain Text: 879445f131312285
+
+*** Starting Block 3 of 9 ***
+
+[+] Success: (24/256) [Byte 16]
+[+] Success: (41/256) [Byte 15]
+[+] Success: (202/256) [Byte 14]
+[+] Success: (245/256) [Byte 13]
+[+] Success: (135/256) [Byte 12]
+[+] Success: (54/256) [Byte 11]
+[+] Success: (236/256) [Byte 10]
+[+] Success: (240/256) [Byte 9]
+[+] Success: (208/256) [Byte 8]
+[+] Success: (53/256) [Byte 7]
+[+] Success: (243/256) [Byte 6]
+[+] Success: (83/256) [Byte 5]
+[+] Success: (3/256) [Byte 4]
+[+] Success: (160/256) [Byte 3]
+[+] Success: (130/256) [Byte 2]
+[+] Success: (194/256) [Byte 1]
+
+Block 3 Results:
+[+] Cipher Text (HEX): d9060cf4dee43b9a1fb0e3a251ebc583
+[+] Intermediate Bytes (HEX): 2e716ef0a106c1391813cc7c0f35d5e9
+[+] Plain Text: aff55e5765c4b673
+
+*** Starting Block 4 of 9 ***
+
+[+] Success: (73/256) [Byte 16]
+[+] Success: (95/256) [Byte 15]
+[+] Success: (115/256) [Byte 14]
+[+] Success: (157/256) [Byte 13]
+[+] Success: (59/256) [Byte 12]
+[+] Success: (42/256) [Byte 11]
+[+] Success: (44/256) [Byte 10]
+[+] Success: (223/256) [Byte 9]
+[+] Success: (90/256) [Byte 8]
+[+] Success: (248/256) [Byte 7]
+[+] Success: (33/256) [Byte 6]
+[+] Success: (25/256) [Byte 5]
+[+] Success: (56/256) [Byte 4]
+[+] Success: (154/256) [Byte 3]
+[+] Success: (199/256) [Byte 2]
+[+] Success: (86/256) [Byte 1]
+
+Block 4 Results:
+[+] Cipher Text (HEX): 173095647139d4a11d76cf1ef2e9d2c7
+[+] Intermediate Bytes (HEX): ba3668c5ebd402af29d3d0c0678ea3b6
+[+] Plain Text: c0d150956c3b6ef5
+
+*** Starting Block 5 of 9 ***
+
+[+] Success: (92/256) [Byte 16]
+[+] Success: (31/256) [Byte 15]
+[+] Success: (117/256) [Byte 14]
+[+] Success: (61/256) [Byte 13]
+[+] Success: (214/256) [Byte 12]
+[+] Success: (85/256) [Byte 11]
+[+] Success: (235/256) [Byte 10]
+[+] Success: (211/256) [Byte 9]
+[+] Success: (103/256) [Byte 8]
+[+] Success: (69/256) [Byte 7]
+[+] Success: (172/256) [Byte 6]
+[+] Success: (178/256) [Byte 5]
+[+] Success: (241/256) [Byte 4]
+[+] Success: (86/256) [Byte 3]
+[+] Success: (164/256) [Byte 2]
+[+] Success: (159/256) [Byte 1]
+
+Block 5 Results:
+[+] Cipher Text (HEX): 4c17a64f17e668d3153c6eab99325bf1
+[+] Intermediate Bytes (HEX): 7153a402425fb1902512ad2fc788e3a5
+[+] Plain Text: fc1f3fe18db15a1b
+
+*** Starting Block 6 of 9 ***
+
+[+] Success: (46/256) [Byte 16]
+[+] Success: (135/256) [Byte 15]
+[+] Success: (245/256) [Byte 14]
+[+] Success: (65/256) [Byte 13]
+[+] Success: (54/256) [Byte 12]
+[+] Success: (255/256) [Byte 11]
+[+] Success: (231/256) [Byte 10]
+ERROR: 500 Can't connect to 34.74.105.127:80 (Connection refused)
+   Retrying in 10 seconds...
+
+[+] Success: (195/256) [Byte 9]
+[+] Success: (10/256) [Byte 8]
+[+] Success: (192/256) [Byte 7]
+[+] Success: (55/256) [Byte 6]
+[+] Success: (164/256) [Byte 5]
+[+] Success: (253/256) [Byte 4]
+[+] Success: (28/256) [Byte 3]
+[+] Success: (162/256) [Byte 2]
+[+] Success: (136/256) [Byte 1]
+
+Block 6 Results:
+[+] Cipher Text (HEX): ec0992fa2a0585b26ffbf99d95a0abcf
+[+] Intermediate Bytes (HEX): 6851ea0e50c24aff351e07cfbb087bd3
+[+] Plain Text: $FLAG$", "id": "
+
+*** Starting Block 7 of 9 ***
+
+[+] Success: (67/256) [Byte 16]
+[+] Success: (5/256) [Byte 15]
+[+] Success: (9/256) [Byte 14]
+[+] Success: (94/256) [Byte 13]
+[+] Success: (70/256) [Byte 12]
+[+] Success: (33/256) [Byte 11]
+[+] Success: (58/256) [Byte 10]
+[+] Success: (187/256) [Byte 9]
+[+] Success: (62/256) [Byte 8]
+[+] Success: (22/256) [Byte 7]
+[+] Success: (155/256) [Byte 6]
+[+] Success: (252/256) [Byte 5]
+[+] Success: (41/256) [Byte 4]
+[+] Success: (80/256) [Byte 3]
+[+] Success: (220/256) [Byte 2]
+[+] Success: (60/256) [Byte 1]
+
+Block 7 Results:
+[+] Cipher Text (HEX): 2cfb95e2f0c8c297b61bc2aa2f7cc6e2
+[+] Intermediate Bytes (HEX): d42bbeda086ee0cb4dc1d9bfa6f4f9bc
+[+] Plain Text: 8", "key": "3TRs
+
+*** Starting Block 8 of 9 ***
+
+[+] Success: (42/256) [Byte 16]
+[+] Success: (90/256) [Byte 15]
+[+] Success: (251/256) [Byte 14]
+[+] Success: (161/256) [Byte 13]
+[+] Success: (3/256) [Byte 12]
+[+] Success: (117/256) [Byte 11]
+[+] Success: (144/256) [Byte 10]
+[+] Success: (119/256) [Byte 9]
+[+] Success: (54/256) [Byte 8]
+[+] Success: (72/256) [Byte 7]
+[+] Success: (116/256) [Byte 6]
+[+] Success: (91/256) [Byte 5]
+[+] Success: (35/256) [Byte 4]
+[+] Success: (20/256) [Byte 3]
+[+] Success: (116/256) [Byte 2]
+[+] Success: (187/256) [Byte 1]
+
+Block 8 Results:
+[+] Cipher Text (HEX): fb242110fffd0706d56684652ad140ae
+[+] Intermediate Bytes (HEX): 5583e2d0a987b2c381778df85b06a4d7
+[+] Plain Text: yxw2YOpT7lORtzb5
+
+*** Starting Block 9 of 9 ***
+
+[+] Success: (91/256) [Byte 16]
+[+] Success: (184/256) [Byte 15]
+[+] Success: (40/256) [Byte 14]
+[+] Success: (220/256) [Byte 13]
+[+] Success: (150/256) [Byte 12]
+[+] Success: (120/256) [Byte 11]
+[+] Success: (149/256) [Byte 10]
+[+] Success: (41/256) [Byte 9]
+[+] Success: (251/256) [Byte 8]
+[+] Success: (249/256) [Byte 7]
+[+] Success: (117/256) [Byte 6]
+[+] Success: (47/256) [Byte 5]
+[+] Success: (157/256) [Byte 4]
+[+] Success: (175/256) [Byte 3]
+[+] Success: (180/256) [Byte 2]
+[+] Success: (115/256) [Byte 1]
+
+Block 9 Results:
+[+] Cipher Text (HEX): d78c4d3dceecb7a351a7799973408d8e
+[+] Intermediate Bytes (HEX): 9d435f6edd800d0cdf6c8e6f20db4aa4
+[+] Plain Text: fg~~"}
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------
+** Finished ***
+
+[+] Decrypted value (ASCII): {"flag": "^FLAG^879445f131312285aff55e5765c4b673c0d150956c3b6ef5fc1f3fe18db15a1b$FLAG$", "id": "8", "key": "3TRsyxw2YOpT7lORtzb5fg~~"}
+
+
+
+
+
+
+
+
+
+
+
+[+] Decrypted value (HEX): 7B22666C6167223A20225E464C41475E3837393434356631333133313232383561666635356535373635633462363733633064313530393536633362366566356663316633666531386462313561316224464C414724222C20226964223A202238222C20226B6579223A20223354527379787732594F7054376C4F52747A623566677E7E227D0A0A0A0A0A0A0A0A0A0A
+
+[+] Decrypted value (Base64): eyJmbGFnIjogIl5GTEFHXjg3OTQ0NWYxMzEzMTIyODVhZmY1NWU1NzY1YzRiNjczYzBkMTUwOTU2YzNiNmVmNWZjMWYzZmUxOGRiMTVhMWIkRkxBRyQiLCAiaWQiOiAiOCIsICJrZXkiOiAiM1RSc3l4dzJZT3BUN2xPUnR6YjVmZ35+In0KCgoKCgoKCgoK
+
+-------------------------------------------------------
