@@ -97,10 +97,10 @@ After a little research, as we have the /cart page, we've tryed with the /login 
 Using Hydra, we've attacked first the user, and then the password, gaining access to the Admin panel, and also to our second flag.
 Those are not easy credentials for handy work, but we can find them in some usual dictionaries ;)
 
-###Flag2
+### Flag2
 Trying to XSS all the fields, we can see the flag when trying to purchase all:)
 
-## Postbook (current)
+## Postbook
 
 Flag0 -- Found
 
@@ -127,13 +127,13 @@ Flag5 -- Found
 
     The cookie allows you to stay signed in. Can you figure out how they work so you can sign in to user with ID 1?
 
-Flag6 -- Not Found
-You don't have any hints for this flag yet.
-### Flag 0
-### Flag 1
+Flag6 -- Found
+
+    Deleting a post seems to take an ID that is not a number. Can you figure out what it is?
+
 ### Flag 2
 Log in as a current user, and write something into "What's on your mind?" form. One of the "hidden variables" is the userid, which we can change :)
-### Flag 3
+
 ### Flag 4
 When editing a post, you can also change the id post in the form.
 ### Flag 5
@@ -158,3 +158,5 @@ c4ca4238a0b923820dcc509a6f75849b  -
 ```
 
 ### Flag 6
+
+The last flag is very similar to the one right before, but deleting posts instead hijacking sessions.
