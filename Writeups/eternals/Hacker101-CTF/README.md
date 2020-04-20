@@ -254,3 +254,37 @@ Table: photos
 Note that, this time, the flag has not any "^FLAG^" headers as usually.
 ### Flag 2
 :(
+
+
+## Cody's First Blog
+
+Flag0 -- Not Found
+You don't have any hints for this flag yet.
+Flag1 -- Found
+
+    Make sure you check everything you're provided
+    Unused code can often lead to information you wouldn't otherwise get
+    Simple guessing might help you out
+
+Flag2 -- Not Found
+You don't have any hints for this flag yet.
+
+## Flag 0
+Testing a simple PHP injection in the code is enough for getting the flag.
+
+### Flag 1
+Into the source code, we find a comment:
+```<!--<a href="?page=admin.auth.inc">Admin login</a>-->```
+So let's go to the ?page=admin.auth.inc.
+Here we get a form without a typical SQLi, but we'll study it later.
+Let's follow with the URL:
+
+If we edit a litle bit the url, removing the last char for instance, we'll got a PHP error like the following:
+```
+Notice: Undefined variable: title in /app/index.php on line 30
+
+Warning: include(admin.auth.in.php): failed to open stream: No such file or directory in /app/index.php on line 21
+
+Warning: include(): Failed opening 'admin.auth.in.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /app/index.php on line 21
+```
+If we test with ?page=admin.inc, we'll get our flag, and all pending comments for aproving as if we were logged in.
