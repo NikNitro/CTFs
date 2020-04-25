@@ -1,0 +1,1 @@
+/home/kali/CTFs/library/Pentesting/first_steps.sh
