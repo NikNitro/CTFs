@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Fri Apr 24 16:31:24 2020 as: nmap -p- --open -T5 -v -oG allPorts -n -Pn 10.10.10.167
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.167 ()	Status: Up
+Host: 10.10.10.167 ()	Ports: 80/open/tcp//http///, 135/open/tcp//msrpc///, 3306/open/tcp//mysql///, 49666/open/tcp/////, 49667/open/tcp/////	Ignored State: filtered (65530)
+# Nmap done at Fri Apr 24 16:32:35 2020 -- 1 IP address (1 host up) scanned in 71.47 seconds

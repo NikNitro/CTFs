@@ -1,0 +1,52 @@
+kali@kali:~$ dirb http://10.10.10.167/ 
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Fri Apr 24 16:43:14 2020
+URL_BASE: http://10.10.10.167/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://10.10.10.167/ ----
++ http://10.10.10.167/admin.php (CODE:200|SIZE:89)                                                                
+==> DIRECTORY: http://10.10.10.167/assets/                                                                        
+==> DIRECTORY: http://10.10.10.167/images/                                                                        
+==> DIRECTORY: http://10.10.10.167/Images/                                                                        
++ http://10.10.10.167/index.php (CODE:200|SIZE:3145)                                                              
+==> DIRECTORY: http://10.10.10.167/uploads/                                                                       
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/assets/ ----
+==> DIRECTORY: http://10.10.10.167/assets/css/                                                                    
+==> DIRECTORY: http://10.10.10.167/assets/js/                                                                     
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/images/ ----
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/Images/ ----
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/uploads/ ----
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/assets/css/ ----
+==> DIRECTORY: http://10.10.10.167/assets/css/images/                                                             
+==> DIRECTORY: http://10.10.10.167/assets/css/Images/                                                             
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/assets/js/ ----
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/assets/css/images/ ----
+==> DIRECTORY: http://10.10.10.167/assets/css/images/ie/                                                          
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/assets/css/Images/ ----
+==> DIRECTORY: http://10.10.10.167/assets/css/Images/ie/                                                          
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/assets/css/images/ie/ ----
+                                                                                                                  
+---- Entering directory: http://10.10.10.167/assets/css/Images/ie/ ----
+                                                                                                                  
+-----------------
+END_TIME: Fri Apr 24 17:28:31 2020
+DOWNLOADED: 50732 - FOUND: 2

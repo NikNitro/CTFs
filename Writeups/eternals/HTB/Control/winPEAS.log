@@ -1,0 +1,807 @@
+*Evil-WinRM* PS C:\inetpub\wwwroot> ./winPEAS.bat
+            *((,.,/((((((((((((((((((((/,  */
+     ,/*,..*(((((((((((((((((((((((((((((((((,
+   ,*/((((((((((((((((((/,  .*//((//**, .*((((((*
+   ((((((((((((((((* *****,,,/########## .(* ,((((((
+   (((((((((((/* ******************/####### .(. ((((((
+   ((((((..******************/@@@@@/***/######* /((((((
+   ,,..**********************@@@@@@@@@@(***,#### ../(((((
+   , ,**********************#@@@@@#@@@@*********##((/ /((((
+   ..(((##########*********/#@@@@@@@@@/*************,,..((((
+   .(((################(/******/@@@@@#****************.. /((
+   .((########################(/************************..*(
+   .((#############################(/********************.,(
+   .((##################################(/***************..(
+   .((######################################(************..(
+   .((######(,.***.,(###################(..***(/*********..(
+  .((######*(#####((##################((######/(********..(
+   .((##################(/**********(################(**...(
+   .(((####################/*******(###################.((((
+   .(((((############################################/  /((
+   ..(((((#########################################(..(((((.
+   ....(((((#####################################( .((((((.
+   ......(((((#################################( .(((((((.
+   (((((((((. ,(############################(../(((((((((.
+       (((((((((/,  ,####################(/..((((((((((.
+             (((((((((/,.  ,*//////*,. ./(((((((((((.
+                (((((((((((((((((((((((((((/"
+                       by carlospolop
+ECHO is off.
+Advisory: winpeas should be used for authorized penetration testing and/or educational purposes only.Any misuse of this software will not be the responsibility of the author or of any other collaborator. Use it at your own networks and/or with the network owner's permission.
+ECHO is off.
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] BASIC SYSTEM INFO <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WINDOWS OS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Check for vulnerabilities for the OS version with the applied patches
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#kernel-exploits
+winPEAS.bat : Access is denied.
+    + CategoryInfo          : NotSpecified: (Access is denied.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+ERROR:
+Description = Access denied
+
+
+
+Access is denied.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] DATE and TIME <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] You may need to adjust your local date/time to exploit some vulnerability
+Sat 04/25/2020
+04:45 PM
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Audit Settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Check what is being logged
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WEF Settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Check where are being sent the logs
+ERROR: The system was unable to find the specified registry key or value.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] LAPS installed? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Check what is being logged
+ERROR: The system was unable to find the specified registry key or value.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] LSA protection? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Active if "1"
+
+
+ERROR: The system was unable to find the specified registry key or value.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Credential Guard? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Active if "1" or "2"
+
+
+ERROR: The system was unable to find the specified registry key or value.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WDigest? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Plain-text creds in memory if "1"
+ERROR: The system was unable to find the specified registry key or value.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Number of cached creds <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] You need System to extract them
+ERROR: Invalid key name.
+Type "REG QUERY /?" for usage.
+[i] You need System to extract them
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+    CACHEDLOGONSCOUNT    REG_SZ    10
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] UAC Settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] If the results read ENABLELUA REG_DWORD 0x1, part or all of the UAC components are on
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#basic-uac-bypass-full-file-system-access
+
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System
+    EnableLUA    REG_DWORD    0x1
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Registered Anti-Virus(AV) <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+ERROR:
+Description = Invalid namespace
+
+
+
+Checking for defender whitelisted PATHS
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] PS settings <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+PowerShell v2 Version:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\PowerShellEngine
+    PowerShellVersion    REG_SZ    2.0
+
+PowerShell v5 Version:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\3\PowerShellEngine
+    PowerShellVersion    REG_SZ    5.1.17763.1
+
+Transcriptions Settings:
+ERROR: The system was unable to find the specified registry key or value.
+Module logging settings:
+ERROR: The system was unable to find the specified registry key or value.
+Scriptblog logging settings:
+ERROR: The system was unable to find the specified registry key or value.
+
+PS default transcript history
+The system cannot find the file specified.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] MOUNTED DISKS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Maybe you find something interesting
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ENVIRONMENT <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Interesting information?
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\Hector\AppData\Roaming
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=CONTROL
+ComSpec=C:\Windows\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+expl=no
+HOMEDRIVE=C:
+HOMEPATH=\Users\Hector
+LOCALAPPDATA=C:\Users\Hector\AppData\Local
+LOGONSERVER=\\CONTROL
+long=no
+NUMBER_OF_PROCESSORS=2
+OS=Windows_NT
+Path=C:\Program Files\PHP\v7.3;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Users\Aris\AppData\Local\Microsoft\WindowsApps;C:\Program Files\dotnet\;C:\Users\Hector\AppData\Local\Microsoft\WindowsApps
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 1 Stepping 2, AuthenticAMD
+PROCESSOR_LEVEL=23
+PROCESSOR_REVISION=0102
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Users\Hector\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+SystemDrive=C:
+SystemRoot=C:\Windows
+TEMP=C:\Users\Hector\AppData\Local\Temp
+TMP=C:\Users\Hector\AppData\Local\Temp
+USERDOMAIN=CONTROL
+USERDOMAIN_ROAMINGPROFILE=CONTROL
+USERNAME=Hector
+USERPROFILE=C:\Users\Hector
+windir=C:\Windows
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] INSTALLED SOFTWARE <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Some weird software? Check for vulnerabilities in unknow software installed
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#software
+Common Files
+Common Files
+dotnet
+dotnet
+IIS
+Internet Explorer
+internet explorer
+MariaDB 10.4
+Microsoft
+Microsoft SDKs
+Microsoft Visual Studio
+Microsoft.NET
+MSBuild
+MySQL
+MySQL
+PHP
+PHP
+Reference Assemblies
+Reference Assemblies
+runphp
+VMware
+Windows Defender
+Windows Defender
+Windows Defender Advanced Threat Protection
+Windows Kits
+Windows Mail
+Windows Mail
+Windows Media Player
+Windows Media Player
+Windows Multimedia Platform
+Windows Multimedia Platform
+windows nt
+windows nt
+Windows Photo Viewer
+Windows Photo Viewer
+Windows Portable Devices
+Windows Portable Devices
+Windows Resource Kits
+Windows Security
+WindowsPowerShell
+WindowsPowerShell
+    InstallLocation    REG_SZ    C:\Program Files\MariaDB 10.4\
+    InstallLocation    REG_SZ    C:\Program Files\MySQL\MySQL Workbench 8.0 CE
+    InstallLocation    REG_SZ    "C:\Program Files (x86)\Microsoft Visual Studio\Installer"
+    InstallLocation    REG_SZ    C:\Program Files\VMware\VMware Tools\
+    InstallLocation    REG_SZ    C:\Program Files\MariaDB 10.4\
+    InstallLocation    REG_SZ    C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Remote Desktop Credentials Manager <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#remote-desktop-credential-manager
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WSUS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] You can inject 'fake' updates into non-SSL WSUS traffic (WSUXploit)
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#wsus
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] RUNNING PROCESSES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Something unexpected is running? Check for vulnerabilities
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#running-processes
+ERROR: Access denied
+
+[i] Checking file permissions of running processes (File backdooring - maybe the same files start automatically when Administrator logs in)
+ERROR:
+Description = Access denied
+
+[i] Checking directory permissions of running processes (DLL injection)
+ERROR:
+Description = Access denied
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] RUN AT STARTUP <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Check if you can modify any binary that is going to be executed by admin or if you can impersonate a not found binary
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#run-at-startup
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] AlwaysInstallElevated? <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] If '1' then you can install a .msi file with admin privileges ;)
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#alwaysinstallelevated
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] NETWORK <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT SHARES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+System error 5 has occurred.
+
+Access is denied.
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] INTERFACES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Fidelity
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet0 2:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : vmxnet3 Ethernet Adapter
+   Physical Address. . . . . . . . . : 00-50-56-B9-FE-66
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : dead:beef::8dcb:84ef:d549:d192(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::8dcb:84ef:d549:d192%8(Preferred)
+   IPv4 Address. . . . . . . . . . . : 10.10.10.167(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::250:56ff:feb9:c785%8
+                                       10.10.10.2
+   DHCPv6 IAID . . . . . . . . . . . : 369119318
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-26-35-F1-A6-00-50-56-B4-59-FB
+   DNS Servers . . . . . . . . . . . : 10.10.10.2
+   NetBIOS over Tcpip. . . . . . . . : Disabled
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] USED PORTS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Check for services restricted from the outside
+  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       832
+  TCP    0.0.0.0:3306           0.0.0.0:0              LISTENING       1868
+  TCP    0.0.0.0:5985           0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:47001          0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING       460
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING       364
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING       984
+  TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING       1740
+  TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING       596
+  TCP    0.0.0.0:49669          0.0.0.0:0              LISTENING       612
+  TCP    [::]:80                [::]:0                 LISTENING       4
+  TCP    [::]:135               [::]:0                 LISTENING       832
+  TCP    [::]:3306              [::]:0                 LISTENING       1868
+  TCP    [::]:5985              [::]:0                 LISTENING       4
+  TCP    [::]:47001             [::]:0                 LISTENING       4
+  TCP    [::]:49664             [::]:0                 LISTENING       460
+  TCP    [::]:49665             [::]:0                 LISTENING       364
+  TCP    [::]:49666             [::]:0                 LISTENING       984
+  TCP    [::]:49667             [::]:0                 LISTENING       1740
+  TCP    [::]:49668             [::]:0                 LISTENING       596
+  TCP    [::]:49669             [::]:0                 LISTENING       612
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] FIREWALL <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Firewall status:
+-------------------------------------------------------------------
+Profile                           = Standard
+Operational mode                  = Enable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Disable
+Group policy version              = Windows Defender Firewall
+Remote admin mode                 = Disable
+
+Ports currently open on all network interfaces:
+Port   Protocol  Version  Program
+-------------------------------------------------------------------
+33060  TCP       Any      (null)
+
+IMPORTANT: Command executed successfully.
+However, "netsh firewall" is deprecated;
+use "netsh advfirewall firewall" instead.
+For more information on using "netsh advfirewall firewall" commands
+instead of "netsh firewall", see KB article 947709
+at https://go.microsoft.com/fwlink/?linkid=121488 .
+
+
+
+Domain profile configuration:
+-------------------------------------------------------------------
+Operational mode                  = Enable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Disable
+
+Service configuration for Domain profile:
+Mode     Customized  Name
+-------------------------------------------------------------------
+Enable   No          File and Printer Sharing
+Enable   No          Remote Desktop
+
+Allowed programs configuration for Domain profile:
+Mode     Traffic direction    Name / Program
+-------------------------------------------------------------------
+
+Port configuration for Domain profile:
+Port   Protocol  Mode    Traffic direction     Name
+-------------------------------------------------------------------
+33060  TCP       Enable  Inbound               Port 33060
+
+Standard profile configuration (current):
+-------------------------------------------------------------------
+Operational mode                  = Enable
+Exception mode                    = Enable
+Multicast/broadcast response mode = Enable
+Notification mode                 = Disable
+
+Service configuration for Standard profile:
+Mode     Customized  Name
+-------------------------------------------------------------------
+Enable   No          File and Printer Sharing
+Enable   Yes         Network Discovery
+Enable   No          Remote Desktop
+
+Allowed programs configuration for Standard profile:
+Mode     Traffic direction    Name / Program
+-------------------------------------------------------------------
+
+Port configuration for Standard profile:
+Port   Protocol  Mode    Traffic direction     Name
+-------------------------------------------------------------------
+33060  TCP       Enable  Inbound               Port 33060
+
+Log configuration:
+-------------------------------------------------------------------
+File location   = C:\Windows\system32\LogFiles\Firewall\pfirewall.log
+Max file size   = 4096 KB
+Dropped packets = Disable
+Connections     = Disable
+
+IMPORTANT: Command executed successfully.
+However, "netsh firewall" is deprecated;
+use "netsh advfirewall firewall" instead.
+For more information on using "netsh advfirewall firewall" commands
+instead of "netsh firewall", see KB article 947709
+at https://go.microsoft.com/fwlink/?linkid=121488 .
+
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ARP <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Interface: 10.10.10.167 --- 0x8
+  Internet Address      Physical Address      Type
+  10.10.10.2            00-50-56-b9-c7-85     dynamic
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ROUTES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+===========================================================================
+Interface List
+  8...00 50 56 b9 fe 66 ......vmxnet3 Ethernet Adapter
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0       10.10.10.2     10.10.10.167    271
+       10.10.10.0    255.255.255.0         On-link      10.10.10.167    271
+     10.10.10.167  255.255.255.255         On-link      10.10.10.167    271
+     10.10.10.255  255.255.255.255         On-link      10.10.10.167    271
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    331
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    331
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link      10.10.10.167    271
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+  255.255.255.255  255.255.255.255         On-link      10.10.10.167    271
+===========================================================================
+Persistent Routes:
+  Network Address          Netmask  Gateway Address  Metric
+          0.0.0.0          0.0.0.0       10.10.10.2  Default
+          0.0.0.0          0.0.0.0       10.10.10.2  Default
+===========================================================================
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+  8    271 ::/0                     fe80::250:56ff:feb9:c785
+  1    331 ::1/128                  On-link
+  8    271 dead:beef::/64           On-link
+  8    271 dead:beef::8dcb:84ef:d549:d192/128
+                                    On-link
+  8    271 fe80::/64                On-link
+  8    271 fe80::8dcb:84ef:d549:d192/128
+                                    On-link
+  1    331 ff00::/8                 On-link
+  8    271 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Hosts file <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CACHE DNS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WIFI <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+The system cannot find the file specified.
+The following command was not found: wlan show profile.
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_->[*] BASIC USER INFO <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Check if you are inside the Administrators group or if you have enabled any token that can be use to escalate privileges like SeImpersonatePrivilege, SeAssignPrimaryPrivilege, SeTcbPrivilege, SeBackupPrivilege, SeRestorePrivilege, SeCreateTokenPrivilege, SeLoadDriverPrivilege, SeTakeOwnershipPrivilege, SeDebbugPrivilege
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#users-and-groups
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT USER <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+User name                    Hector
+Full Name                    Hector
+Comment
+User's comment
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            11/1/2019 12:27:50 PM
+Password expires             Never
+Password changeable          11/1/2019 12:27:50 PM
+Password required            Yes
+User may change password     No
+
+Workstations allowed         All
+Logon script
+User profile
+Home directory
+Last logon                   4/25/2020 4:44:19 PM
+
+Logon hours allowed          All
+
+Local Group Memberships      *Remote Management Use*Users
+Global Group memberships     *None
+The command completed successfully.
+
+The request will be processed at a domain controller for domain WORKGROUP.
+
+
+USER INFORMATION
+----------------
+
+User Name      SID
+============== ============================================
+control\hector S-1-5-21-3271572904-80546332-2170161114-1000
+
+
+GROUP INFORMATION
+-----------------
+
+Group Name                             Type             SID          Attributes
+====================================== ================ ============ ==================================================
+Everyone                               Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Remote Management Users        Alias            S-1-5-32-580 Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                          Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NETWORK                   Well-known group S-1-5-2      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users       Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization         Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Local account             Well-known group S-1-5-113    Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NTLM Authentication       Well-known group S-1-5-64-10  Mandatory group, Enabled by default, Enabled group
+Mandatory Label\Medium Mandatory Level Label            S-1-16-8192
+
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== =======
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] USERS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+User accounts for \\
+
+-------------------------------------------------------------------------------
+Administrator            DefaultAccount           Guest
+Hector                   WDAGUtilityAccount
+The command completed with one or more errors.
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] GROUPS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Aliases for \\CONTROL
+
+-------------------------------------------------------------------------------
+*Access Control Assistance Operators
+*Administrators
+*Backup Operators
+*Certificate Service DCOM Access
+*Cryptographic Operators
+*Device Owners
+*Distributed COM Users
+*Event Log Readers
+*Guests
+*Hyper-V Administrators
+*IIS_IUSRS
+*Network Configuration Operators
+*Performance Log Users
+*Performance Monitor Users
+*Power Users
+*Print Operators
+*RDS Endpoint Servers
+*RDS Management Servers
+*RDS Remote Access Servers
+*Remote Desktop Users
+*Remote Management Users
+*Replicator
+*Storage Replica Administrators
+*System Managed Accounts Group
+*Users
+The command completed successfully.
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] ADMINISTRATORS GROUPS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator
+The command completed successfully.
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT LOGGED USERS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+ USERNAME              SESSIONNAME        ID  STATE   IDLE TIME  LOGON TIME
+ hector                console             1  Active      none   4/25/2020 4:21 PM
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Kerberos Tickets <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Current LogonId is 0:0x5bde7e
+Error calling API LsaCallAuthenticationPackage (ShowTickets substatus): 1312
+
+klist failed with 0xc000005f/-1073741729: A specified logon session does not exist. It may already have been terminated.
+
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CURRENT CLIPBOARD <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Any password inside the clipboard?
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] SERVICES VULNERABILITIES <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] SERVICE BINARY PERMISSIONS WITH WMIC + ICACLS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services
+ERROR:
+Description = Access denied
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] CHECK IF YOU CAN MODIFY ANY SERVICE REGISTRY <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] UNQUOTED SERVICE PATHS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] When the path is not quoted (ex: C:\Program files\soft\new folder\exec.exe) Windows will try to execute first 'C:\Progam.exe', then 'C:\Program Files\soft\new.exe' and finally 'C:\Program Files\soft\new folder\exec.exe'. Try to create 'C:\Program Files\soft\new.exe'
+[i] The permissions are also checked and filtered using icacls
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] DLL HIJACKING in PATHenv variable <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Maybe you can take advantage of modifying/creating some binary in some of the following locations
+[i] PATH variable entries permissions - place binary or DLL to execute instead of legitimate
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dll-hijacking
+C:\Program Files\PHP\v7.3 NT SERVICE\TrustedInstaller:(I)(F)
+
+C:\Windows\system32 NT SERVICE\TrustedInstaller:(F)
+
+C:\Windows NT SERVICE\TrustedInstaller:(F)
+
+C:\Windows\System32\Wbem NT SERVICE\TrustedInstaller:(F)
+
+C:\Users\Hector\AppData\Local\Microsoft\WindowsApps NT AUTHORITY\SYSTEM:(OI)(CI)(F)
+                                                    CONTROL\Hector:(OI)(CI)(F)
+
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [*] CREDENTIALS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] WINDOWS VAULT <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#windows-vault
+
+Currently stored credentials:
+
+* NONE *
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] DPAPI MASTER KEYS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Use the Mimikatz 'dpapi::masterkey' module with appropriate arguments (/rpc) to decrypt
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dpapi
+
+
+    Directory: C:\Users\Hector\AppData\Roaming\Microsoft\Protect
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d---s-        11/1/2019  11:09 AM                S-1-5-21-3271572904-80546332-2170161114-1000
+
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] DPAPI MASTER KEYS <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Use the Mimikatz 'dpapi::cred' module with appropriate /masterkey to decrypt
+[i] You can also extract many DPAPI masterkeys from memory with the Mimikatz 'sekurlsa::dpapi' module
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dpapi
+Looking inside C:\Users\Hector\AppData\Roaming\Microsoft\Credentials\
+Looking inside C:\Users\Hector\AppData\Local\Microsoft\Credentials\
+DFBE70A7E5CC19A398EBF1B96859CE5D
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Unattended files <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+C:\Windows\Panther\Unattend.xml exists.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] SAM
+'SYSTEM' is not recognized as an internal or external command,
+operable program or batch file.
+C:\Windows\System32\config\RegBack\SAM exists.
+C:\Windows\System32\config\SAM exists.
+C:\Windows\System32\config\SYSTEM exists.
+C:\Windows\System32\config\RegBack\SYSTEM exists.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] McAffe SiteList.xml <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+ Volume in drive C has no label.
+ Volume Serial Number is C05D-877F
+File Not Found
+ Volume in drive C has no label.
+ Volume Serial Number is C05D-877F
+File Not Found
+ Volume in drive C has no label.
+ Volume Serial Number is C05D-877F
+File Not Found
+ Volume in drive C has no label.
+ Volume Serial Number is C05D-877F
+File Not Found
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] GPP Password <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+The system cannot find the path specified.
+File Not Found
+The system cannot find the path specified.
+File Not Found
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Cloud Creds <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+File Not Found
+File Not Found
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] AppCmd <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#appcmd-exe
+C:\Windows\system32\inetsrv\appcmd.exe exists.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-> [+] Files an registry that may contain credentials <_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+[i] Searching specific files that may contains credentials.
+  [?] https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-inside-files
+Looking inside HKCU\Software\ORL\WinVNC3\Password
+Looking inside HKEY_LOCAL_MACHINE\SOFTWARE\RealVNC\WinVNC4/password
+Looking inside HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\WinLogon
+    LastUsedUsername    REG_SZ    Hector
+    DefaultUserName    REG_SZ    Hector
+    DefaultDomainName    REG_SZ    CONTROL
+Looking inside HKLM\SYSTEM\CurrentControlSet\Services\SNMP
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SNMP\Parameters
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SNMP\Parameters\ExtensionAgents
+    W3SVC    REG_SZ    Software\Microsoft\W3SVC\CurrentVersion
+
+Looking inside HKCU\Software\TightVNC\Server
+Looking inside HKCU\Software\SimonTatham\PuTTY\Sessions
+Looking inside HKCU\Software\OpenSSH\Agent\Keys
+C:\MariaDB\my.ini
+C:\Program Files\MariaDB 10.4\data\my.ini
+C:\Program Files\PHP\v7.3\php.ini
+C:\Program Files (x86)\PHP\v5.3\php.ini
+C:\Users\Hector\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+C:\Windows\Panther\unattend.xml
+C:\Windows\Panther\setupinfo
+C:\Windows\servicing\LCU\Package_for_RollupFix~31bf3856ad364e35~amd64~~17763.805.1.13\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.802_none_1e7c60c1f59ab8b2\f\appcmd.exe
+C:\Windows\servicing\LCU\Package_for_RollupFix~31bf3856ad364e35~amd64~~17763.805.1.13\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.802_none_1e7c60c1f59ab8b2\r\appcmd.exe
+C:\Windows\servicing\LCU\Package_for_RollupFix~31bf3856ad364e35~amd64~~17763.805.1.13\wow64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.802_none_28d10b1429fb7aad\f\appcmd.exe
+C:\Windows\servicing\LCU\Package_for_RollupFix~31bf3856ad364e35~amd64~~17763.805.1.13\wow64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.802_none_28d10b1429fb7aad\r\appcmd.exe
+C:\Windows\System32\config\SAM
+C:\Windows\System32\config\SYSTEM
+C:\Windows\System32\config\RegBack\SAM
+C:\Windows\System32\config\RegBack\SYSTEM
+C:\Windows\System32\inetsrv\appcmd.exe
+C:\Windows\SysWOW64\inetsrv\appcmd.exe
+C:\Windows\WinSxS\amd64_ipamprov-dcnps_31bf3856ad364e35_10.0.17763.1_none_90fd9849ea1e4266\ScheduledTasks.xml
+C:\Windows\WinSxS\amd64_ipamprov-dhcp_31bf3856ad364e35_10.0.17763.1_none_64f02b544b2506ef\ScheduledTasks.xml
+C:\Windows\WinSxS\amd64_ipamprov-dns_31bf3856ad364e35_10.0.17763.1_none_825235baef207c8d\ScheduledTasks.xml
+C:\Windows\WinSxS\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.1_none_9a517574c8380381\appcmd.exe
+C:\Windows\WinSxS\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.802_none_1e7c60c1f59ab8b2\appcmd.exe
+C:\Windows\WinSxS\amd64_microsoft-windows-webenroll.resources_31bf3856ad364e35_10.0.17763.1_en-us_742f5bf0baaff2c7\certnew.cer
+C:\Windows\WinSxS\wow64_ipamprov-dcnps_31bf3856ad364e35_10.0.17763.1_none_9b52429c1e7f0461\ScheduledTasks.xml
+C:\Windows\WinSxS\wow64_ipamprov-dhcp_31bf3856ad364e35_10.0.17763.1_none_6f44d5a67f85c8ea\ScheduledTasks.xml
+C:\Windows\WinSxS\wow64_ipamprov-dns_31bf3856ad364e35_10.0.17763.1_none_8ca6e00d23813e88\ScheduledTasks.xml
+C:\Windows\WinSxS\wow64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.1_none_a4a61fc6fc98c57c\appcmd.exe
+C:\Windows\WinSxS\wow64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.17763.802_none_28d10b1429fb7aad\appcmd.exe
+File Not Found
+
+
+*Evil-WinRM* PS C:\inetpub\wwwroot> 
