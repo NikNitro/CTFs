@@ -1,3 +1,7 @@
+# Modify .bashrc
+rm ~/.bashrc
+ln -s .bashrc ~/.bashrc
+
 # Update repositories
 sudo apt-get update 
 
@@ -6,7 +10,7 @@ if [ -d "$HOME/.local/bin" ] ; then
   PATH="$PATH:$HOME/.local/bin"
 fi
 
-# Install ifconfig
+# Install net-tools
 sudo apt-get install net-tools -y
 
 # Install Python stuff
@@ -16,4 +20,5 @@ which virtualenv
 cd $HOME
 virtualenv -p python3 venv
 source venv/bin/activate
-pip install beautifulsoup4
+pip install -r requirements.txt
+
