@@ -2,6 +2,11 @@
 rm ~/.bashrc
 ln -s .bashrc ~/.bashrc
 
+# Add apt repositories if there arent on "cat /etc/apt/sources.list"
+## sudo tee -a /etc/apt/sources.list<<EOF
+## deb http://http.kali.org/kali kali-rolling main non-free contrib
+## deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+## EOF
 # Update repositories
 sudo apt-get update 
 
