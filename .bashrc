@@ -101,8 +101,8 @@ alias HTB='cd ~/CTFs/Writeups/eternals/HTB'
 alias venv='source ~/venv/bin/activate'
 
 #### Add some folders to the PATH
-PATH=$PATH/home/kali/CTFs/library/common_scripts:
-
+PATH=$PATH:/home/kali/CTFs/library/common_scripts
+PATH=$PATH:/opt/binaries
 #### End custom definition
 
 # Alias definitions.
