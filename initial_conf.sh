@@ -27,3 +27,9 @@ virtualenv -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
 
+# Install Chisel
+cd /opt/
+sudo git clone https://github.com/jpillora/chisel.git
+cd chisel/
+sudo go build
+ln -s /opt/chisel/chisel $HOME/.local/bin/chisel
