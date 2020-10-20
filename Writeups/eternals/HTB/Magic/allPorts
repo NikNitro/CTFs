@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Sat Apr 25 18:53:22 2020 as: nmap -p- --open -T5 -v -oG allPorts -n -Pn 10.10.10.185
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.185 ()	Status: Up
+Host: 10.10.10.185 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///
+# Nmap done at Sat Apr 25 18:53:59 2020 -- 1 IP address (1 host up) scanned in 36.85 seconds

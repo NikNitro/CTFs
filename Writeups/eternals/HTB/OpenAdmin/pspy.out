@@ -1,0 +1,155 @@
+jimmy@openadmin:~$ /tmp/pspy64 
+pspy - version: v1.2.0 - Commit SHA: 9c63e5d6c58f7bcdc235db663f5e3fe1c33b8855
+
+
+     ██▓███    ██████  ██▓███ ▓██   ██▓
+    ▓██░  ██▒▒██    ▒ ▓██░  ██▒▒██  ██▒
+    ▓██░ ██▓▒░ ▓██▄   ▓██░ ██▓▒ ▒██ ██░
+    ▒██▄█▓▒ ▒  ▒   ██▒▒██▄█▓▒ ▒ ░ ▐██▓░
+    ▒██▒ ░  ░▒██████▒▒▒██▒ ░  ░ ░ ██▒▓░
+    ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░  ██▒▒▒ 
+    ░▒ ░     ░ ░▒  ░ ░░▒ ░     ▓██ ░▒░ 
+    ░░       ░  ░  ░  ░░       ▒ ▒ ░░  
+                   ░           ░ ░     
+                               ░ ░     
+
+Config: Printing events (colored=true): processes=true | file-system-events=false ||| Scannning for processes every 100ms and on inotify events ||| Watching directories: [/usr /tmp /etc /home /var /opt] (recursive) | [] (non-recursive)
+Draining file system events due to startup...
+done
+2020/04/23 21:40:47 CMD: UID=0    PID=974    | /sbin/agetty -o -p -- \u --noclear tty1 linux 
+2020/04/23 21:40:47 CMD: UID=0    PID=96     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=90     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=9      | 
+2020/04/23 21:40:47 CMD: UID=0    PID=89     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=88     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=879    | /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal 
+2020/04/23 21:40:47 CMD: UID=0    PID=87     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=86     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=85     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=8      | 
+2020/04/23 21:40:47 CMD: UID=0    PID=7      | 
+2020/04/23 21:40:47 CMD: UID=0    PID=696    | /usr/lib/policykit-1/polkitd --no-debug 
+2020/04/23 21:40:47 CMD: UID=0    PID=624    | /usr/lib/snapd/snapd 
+2020/04/23 21:40:47 CMD: UID=0    PID=6      | 
+2020/04/23 21:40:47 CMD: UID=103  PID=584    | /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only 
+2020/04/23 21:40:47 CMD: UID=0    PID=582    | /usr/bin/lxcfs /var/lib/lxcfs/ 
+2020/04/23 21:40:47 CMD: UID=0    PID=578    | /lib/systemd/systemd-logind 
+2020/04/23 21:40:47 CMD: UID=0    PID=577    | /usr/sbin/cron -f 
+2020/04/23 21:40:47 CMD: UID=0    PID=576    | /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers 
+2020/04/23 21:40:47 CMD: UID=102  PID=574    | /usr/sbin/rsyslogd -n 
+2020/04/23 21:40:47 CMD: UID=0    PID=570    | /usr/sbin/atd -f 
+2020/04/23 21:40:47 CMD: UID=0    PID=569    | /usr/lib/accountsservice/accounts-daemon 
+2020/04/23 21:40:47 CMD: UID=0    PID=568    | /usr/sbin/irqbalance --foreground 
+2020/04/23 21:40:47 CMD: UID=0    PID=552    | /usr/bin/vmtoolsd 
+2020/04/23 21:40:47 CMD: UID=0    PID=504    | /usr/bin/VGAuthService 
+2020/04/23 21:40:47 CMD: UID=101  PID=493    | /lib/systemd/systemd-resolved 
+2020/04/23 21:40:47 CMD: UID=62583 PID=492    | /lib/systemd/systemd-timesyncd 
+2020/04/23 21:40:47 CMD: UID=100  PID=467    | /lib/systemd/systemd-networkd 
+2020/04/23 21:40:47 CMD: UID=0    PID=458    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=457    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=43     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=42     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=418    | /lib/systemd/systemd-udevd 
+2020/04/23 21:40:47 CMD: UID=0    PID=41     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=404    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=403    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=4      | 
+2020/04/23 21:40:47 CMD: UID=0    PID=399    | /sbin/lvmetad -f 
+2020/04/23 21:40:47 CMD: UID=0    PID=397    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=396    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=395    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=394    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=393    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=386    | /lib/systemd/systemd-journald 
+2020/04/23 21:40:47 CMD: UID=0    PID=37     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=36     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=35     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=34     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=336    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=335    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=33     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=32     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=31     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=30     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=29     | 
+2020/04/23 21:40:47 CMD: UID=33   PID=2896   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=1000 PID=2881   | /tmp/pspy64 
+2020/04/23 21:40:47 CMD: UID=0    PID=288    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=28     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=2733   | 
+2020/04/23 21:40:47 CMD: UID=0    PID=2732   | 
+2020/04/23 21:40:47 CMD: UID=0    PID=27     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=26     | 
+2020/04/23 21:40:47 CMD: UID=1000 PID=2590   | -bash 
+2020/04/23 21:40:47 CMD: UID=1000 PID=2586   | sshd: jimmy@pts/0    
+2020/04/23 21:40:47 CMD: UID=0    PID=25     | 
+2020/04/23 21:40:47 CMD: UID=1000 PID=2465   | (sd-pam) 
+2020/04/23 21:40:47 CMD: UID=1000 PID=2458   | /lib/systemd/systemd --user 
+2020/04/23 21:40:47 CMD: UID=0    PID=2454   | sshd: jimmy [priv]   
+2020/04/23 21:40:47 CMD: UID=0    PID=2434   | 
+2020/04/23 21:40:47 CMD: UID=0    PID=24     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=221    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=22     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=218    | 
+2020/04/23 21:40:47 CMD: UID=33   PID=2172   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=33   PID=2171   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=33   PID=2170   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=0    PID=216    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=215    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=214    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=213    | 
+2020/04/23 21:40:47 CMD: UID=33   PID=2111   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=33   PID=2110   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=33   PID=2109   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=0    PID=21     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=2089   | 
+2020/04/23 21:40:47 CMD: UID=0    PID=2086   | 
+2020/04/23 21:40:47 CMD: UID=0    PID=20     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=2      | 
+2020/04/23 21:40:47 CMD: UID=0    PID=1969   | 
+2020/04/23 21:40:47 CMD: UID=0    PID=19     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=18     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=175    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=174    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=1647   | 
+2020/04/23 21:40:47 CMD: UID=0    PID=16     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=15     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=14     | 
+2020/04/23 21:40:47 CMD: UID=33   PID=1396   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=0    PID=13     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=122    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=12     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=11     | 
+2020/04/23 21:40:47 CMD: UID=33   PID=1071   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=33   PID=1070   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=33   PID=1067   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=111  PID=1065   | /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid 
+2020/04/23 21:40:47 CMD: UID=0    PID=105    | 
+2020/04/23 21:40:47 CMD: UID=0    PID=1039   | /usr/sbin/apache2 -k start 
+2020/04/23 21:40:47 CMD: UID=0    PID=1021   | /usr/sbin/sshd -D 
+2020/04/23 21:40:47 CMD: UID=0    PID=10     | 
+2020/04/23 21:40:47 CMD: UID=0    PID=1      | /sbin/init auto automatic-ubiquity noprompt 
+2020/04/23 21:41:04 CMD: UID=33   PID=2900   | /usr/sbin/apache2 -k start 
+2020/04/23 21:41:22 CMD: UID=33   PID=2901   | /usr/sbin/apache2 -k start 
+2020/04/23 21:41:40 CMD: UID=33   PID=2902   | /usr/sbin/apache2 -k start 
+2020/04/23 21:41:57 CMD: UID=33   PID=2903   | /usr/sbin/apache2 -k start 
+2020/04/23 21:42:15 CMD: UID=33   PID=2904   | /usr/sbin/apache2 -k start 
+2020/04/23 21:42:33 CMD: UID=33   PID=2905   | /usr/sbin/apache2 -k start 
+2020/04/23 21:42:51 CMD: UID=33   PID=2906   | /usr/sbin/apache2 -k start 
+2020/04/23 21:43:08 CMD: UID=33   PID=2907   | /usr/sbin/apache2 -k start 
+2020/04/23 21:43:26 CMD: UID=33   PID=2908   | /usr/sbin/apache2 -k start 
+2020/04/23 21:43:43 CMD: UID=33   PID=2909   | /usr/sbin/apache2 -k start 
+2020/04/23 21:44:01 CMD: UID=33   PID=2910   | /usr/sbin/apache2 -k start 
+2020/04/23 21:44:15 CMD: UID=0    PID=2911   | 
+2020/04/23 21:44:19 CMD: UID=33   PID=2914   | /usr/sbin/apache2 -k start 
+2020/04/23 21:44:33 CMD: UID=33   PID=2917   | php -l /opt/ona/www/local/config/database_settings.inc.php 
+2020/04/23 21:44:33 CMD: UID=33   PID=2916   | sh -c php -l /opt/ona/www/local/config/database_settings.inc.php 
+2020/04/23 21:44:33 CMD: UID=33   PID=2915   | /usr/sbin/apache2 -k start 
+2020/04/23 21:44:37 CMD: UID=33   PID=2918   | /usr/sbin/apache2 -k start 
+2020/04/23 21:44:55 CMD: UID=33   PID=2919   | /usr/sbin/apache2 -k start 
+2020/04/23 21:45:13 CMD: UID=33   PID=2920   | /usr/sbin/apache2 -k start 
+2020/04/23 21:45:30 CMD: UID=33   PID=2923   | /usr/sbin/apache2 -k start 
+2020/04/23 21:45:48 CMD: UID=33   PID=2924   | /usr/sbin/apache2 -k start 
+2020/04/23 21:46:06 CMD: UID=33   PID=2925   | /usr/sbin/apache2 -k start 
+2020/04/23 21:46:24 CMD: UID=33   PID=2926   | /usr/sbin/apache2 -k start 
+

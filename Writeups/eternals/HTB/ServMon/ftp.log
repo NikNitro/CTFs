@@ -1,0 +1,92 @@
+(venv) kali@kali:~/CTFs/testing$ ftp 10.10.10.184
+Connected to 10.10.10.184.
+220 Microsoft FTP Service
+Name (10.10.10.184:kali): Anonymous
+331 Anonymous access allowed, send identity (e-mail name) as password.
+Password:
+230 User logged in.
+Remote system type is Windows_NT.
+ftp> ls
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:05PM       <DIR>          Users
+226 Transfer complete.
+ftp> cd Users
+250 CWD command successful.
+ftp> ls
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:06PM       <DIR>          Nadine
+01-18-20  12:08PM       <DIR>          Nathan
+226 Transfer complete.
+ftp> ls Nadine
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:08PM                  174 Confidential.txt
+226 Transfer complete.
+ftp> ls Nathan
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:10PM                  186 Notes to do.txt
+226 Transfer complete.
+ftp> cd Nadine
+250 CWD command successful.
+ftp> ls
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:08PM                  174 Confidential.txt
+226 Transfer complete.
+ftp> get Confidential.txt
+local: Confidential.txt remote: Confidential.txt
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+226 Transfer complete.
+174 bytes received in 0.05 secs (3.2018 kB/s)
+ftp> cd ..
+250 CWD command successful.
+ftp> cd Nathan
+250 CWD command successful.
+ftp> ls
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:10PM                  186 Notes to do.txt
+226 Transfer complete.
+ftp> get Notes to do.txt
+local: to remote: Notes
+200 PORT command successful.
+550 The system cannot find the file specified. 
+ftp> get "Notes to do.txt"
+local: Notes to do.txt remote: Notes to do.txt
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+226 Transfer complete.
+186 bytes received in 0.05 secs (3.8379 kB/s)
+ftp> ls
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:10PM                  186 Notes to do.txt
+226 Transfer complete.
+ftp> cd ..
+250 CWD command successful.
+ftp> ls
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:06PM       <DIR>          Nadine
+01-18-20  12:08PM       <DIR>          Nathan
+226 Transfer complete.
+ftp> cd ..
+250 CWD command successful.
+ftp> ls
+200 PORT command successful.
+125 Data connection already open; Transfer starting.
+01-18-20  12:05PM       <DIR>          Users
+226 Transfer complete.
+ftp> cd ..
+250 CWD command successful.
+ftp> ls
+200 PORT command successful.
+150 Opening ASCII mode data connection.
+01-18-20  12:05PM       <DIR>          Users
+226 Transfer complete.
+ftp> exit
+221 Goodbye.

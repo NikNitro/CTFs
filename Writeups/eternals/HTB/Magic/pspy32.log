@@ -1,0 +1,294 @@
+pspy - version: v1.2.0 - Commit SHA: 9c63e5d6c58f7bcdc235db663f5e3fe1c33b8855
+
+
+     ██▓███    ██████  ██▓███ ▓██   ██▓
+    ▓██░  ██▒▒██    ▒ ▓██░  ██▒▒██  ██▒
+    ▓██░ ██▓▒░ ▓██▄   ▓██░ ██▓▒ ▒██ ██░
+    ▒██▄█▓▒ ▒  ▒   ██▒▒██▄█▓▒ ▒ ░ ▐██▓░
+    ▒██▒ ░  ░▒██████▒▒▒██▒ ░  ░ ░ ██▒▓░
+    ▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░  ██▒▒▒ 
+    ░▒ ░     ░ ░▒  ░ ░░▒ ░     ▓██ ░▒░ 
+    ░░       ░  ░  ░  ░░       ▒ ▒ ░░  
+                   ░           ░ ░     
+                               ░ ░     
+
+Config: Printing events (colored=true): processes=true | file-system-events=false ||| Scannning for processes every 100ms and on inotify events ||| Watching directories: [/usr /tmp /etc /home /var /opt] (recursive) | [] (non-recursive)
+Draining file system events due to startup...
+done
+2020/04/26 06:21:17 CMD: UID=0    PID=9      | 
+2020/04/26 06:21:17 CMD: UID=0    PID=849    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=652    | /usr/lib/policykit-1/polkitd --no-debug 
+2020/04/26 06:21:17 CMD: UID=0    PID=6      | 
+2020/04/26 06:21:17 CMD: UID=0    PID=585    | /usr/lib/snapd/snapd 
+2020/04/26 06:21:17 CMD: UID=0    PID=573    | /usr/sbin/ModemManager --filter-policy=strict                                                                                  
+2020/04/26 06:21:17 CMD: UID=0    PID=571    | /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant                                                                              
+2020/04/26 06:21:17 CMD: UID=0    PID=567    | /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers                                                           
+2020/04/26 06:21:17 CMD: UID=0    PID=565    | /usr/sbin/NetworkManager --no-daemon 
+2020/04/26 06:21:17 CMD: UID=102  PID=564    | /usr/sbin/rsyslogd -n 
+2020/04/26 06:21:17 CMD: UID=0    PID=562    | /usr/sbin/acpid 
+2020/04/26 06:21:17 CMD: UID=103  PID=548    | /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only                       
+2020/04/26 06:21:17 CMD: UID=116  PID=545    | avahi-daemon: chroot helper 
+2020/04/26 06:21:17 CMD: UID=0    PID=542    | /usr/lib/accountsservice/accounts-daemon                                                                                       
+2020/04/26 06:21:17 CMD: UID=0    PID=541    | /lib/systemd/systemd-logind 
+2020/04/26 06:21:17 CMD: UID=0    PID=540    | /usr/sbin/irqbalance --foreground 
+2020/04/26 06:21:17 CMD: UID=116  PID=538    | avahi-daemon: running [ubuntu.local] 
+2020/04/26 06:21:17 CMD: UID=0    PID=537    | /usr/lib/udisks2/udisksd 
+2020/04/26 06:21:17 CMD: UID=0    PID=522    | /usr/sbin/cron -f 
+2020/04/26 06:21:17 CMD: UID=0    PID=518    | /usr/bin/vmtoolsd 
+2020/04/26 06:21:17 CMD: UID=0    PID=516    | /usr/bin/VGAuthService 
+2020/04/26 06:21:17 CMD: UID=101  PID=468    | /lib/systemd/systemd-resolved 
+2020/04/26 06:21:17 CMD: UID=62583 PID=467    | /lib/systemd/systemd-timesyncd 
+2020/04/26 06:21:17 CMD: UID=0    PID=459    | 
+2020/04/26 06:21:17 CMD: UID=1000 PID=4586   | ./pspy32 
+2020/04/26 06:21:17 CMD: UID=1000 PID=4532   | -su 
+2020/04/26 06:21:17 CMD: UID=33   PID=4531   | su - theseus 
+2020/04/26 06:21:17 CMD: UID=0    PID=453    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=4527   | 
+2020/04/26 06:21:17 CMD: UID=0    PID=451    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=4499   | -bash 
+2020/04/26 06:21:17 CMD: UID=0    PID=4498   | sudo -i 
+2020/04/26 06:21:17 CMD: UID=0    PID=4488   | 
+2020/04/26 06:21:17 CMD: UID=0    PID=4463   | 
+2020/04/26 06:21:17 CMD: UID=0    PID=437    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=425    | vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid                    
+2020/04/26 06:21:17 CMD: UID=0    PID=4222   | 
+2020/04/26 06:21:17 CMD: UID=0    PID=420    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=4076   | 
+2020/04/26 06:21:17 CMD: UID=0    PID=403    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=4      | 
+2020/04/26 06:21:17 CMD: UID=0    PID=391    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=364    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=361    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=354    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=353    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=348    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=347    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=345    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=340    | /lib/systemd/systemd-udevd 
+2020/04/26 06:21:17 CMD: UID=0    PID=327    | /lib/systemd/systemd-journald 
+2020/04/26 06:21:17 CMD: UID=0    PID=30     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=3      | 
+2020/04/26 06:21:17 CMD: UID=0    PID=29     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=289    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=288    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=28     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=27     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=267    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=266    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=265    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=263    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=262    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=26     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=25     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=24     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=23     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=22     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=212    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=211    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=21     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=2026   | 
+2020/04/26 06:21:17 CMD: UID=1000 PID=2009   | -su 
+2020/04/26 06:21:17 CMD: UID=0    PID=20     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=2      | 
+2020/04/26 06:21:17 CMD: UID=1000 PID=1998   | (sd-pam) 
+2020/04/26 06:21:17 CMD: UID=1000 PID=1997   | /lib/systemd/systemd --user 
+2020/04/26 06:21:17 CMD: UID=33   PID=1996   | su - theseus 
+2020/04/26 06:21:17 CMD: UID=33   PID=1987   | /bin/bash 
+2020/04/26 06:21:17 CMD: UID=33   PID=1986   | python3 -c import pty;pty.spawn("/bin/bash") 
+2020/04/26 06:21:17 CMD: UID=33   PID=1984   | /usr/sbin/apache2 -k start 
+2020/04/26 06:21:17 CMD: UID=33   PID=1983   | /bin/sh 
+2020/04/26 06:21:17 CMD: UID=33   PID=1982   | sh -c ./backdoor 
+2020/04/26 06:21:17 CMD: UID=0    PID=190    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=18     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=179    | 
+2020/04/26 06:21:17 CMD: UID=33   PID=1764   | /bin/sh 
+2020/04/26 06:21:17 CMD: UID=33   PID=1763   | python3 -c import pty; pty.spawn("/bin/sh") 
+2020/04/26 06:21:17 CMD: UID=0    PID=176    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=175    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=174    | 
+2020/04/26 06:21:17 CMD: UID=33   PID=1735   | /bin/sh -i 
+2020/04/26 06:21:17 CMD: UID=33   PID=1734   | sh -c /bin/sh -i 
+2020/04/26 06:21:17 CMD: UID=0    PID=1733   | 
+2020/04/26 06:21:17 CMD: UID=0    PID=173    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=172    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=171    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=170    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=17     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=169    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=168    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=167    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=166    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=165    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=1643   | /usr/sbin/cups-browsed 
+2020/04/26 06:21:17 CMD: UID=0    PID=1642   | /usr/sbin/cupsd -l 
+2020/04/26 06:21:17 CMD: UID=0    PID=164    | 
+2020/04/26 06:21:17 CMD: UID=33   PID=1634   | /usr/sbin/apache2 -k start 
+2020/04/26 06:21:17 CMD: UID=33   PID=1632   | /usr/sbin/apache2 -k start 
+2020/04/26 06:21:17 CMD: UID=33   PID=1631   | /usr/sbin/apache2 -k start 
+2020/04/26 06:21:17 CMD: UID=33   PID=1630   | /usr/sbin/apache2 -k start 
+2020/04/26 06:21:17 CMD: UID=0    PID=163    | 
+2020/04/26 06:21:17 CMD: UID=33   PID=1629   | /usr/sbin/apache2 -k start 
+2020/04/26 06:21:17 CMD: UID=0    PID=162    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=161    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=160    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=16     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=159    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=158    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=157    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=156    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=155    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=154    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=153    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=152    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=151    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=150    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=15     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=149    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=148    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=147    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=146    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=145    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=144    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=143    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=142    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1413   | /usr/lib/ibus/ibus-engine-simple 
+2020/04/26 06:21:17 CMD: UID=0    PID=141    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=140    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=14     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=139    | 
+2020/04/26 06:21:17 CMD: UID=117  PID=1386   | /usr/lib/colord/colord 
+2020/04/26 06:21:17 CMD: UID=121  PID=1374   | /usr/lib/gnome-settings-daemon/gsd-wacom                                                                                       
+2020/04/26 06:21:17 CMD: UID=121  PID=1370   | /usr/lib/gnome-settings-daemon/gsd-sound                                                                                       
+2020/04/26 06:21:17 CMD: UID=121  PID=1361   | /usr/lib/gnome-settings-daemon/gsd-smartcard                                                                                   
+2020/04/26 06:21:17 CMD: UID=0    PID=136    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1357   | /usr/lib/gnome-settings-daemon/gsd-sharing                                                                                     
+2020/04/26 06:21:17 CMD: UID=121  PID=1354   | /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy                                                                           
+2020/04/26 06:21:17 CMD: UID=121  PID=1351   | /usr/lib/gnome-settings-daemon/gsd-rfkill                                                                                      
+2020/04/26 06:21:17 CMD: UID=0    PID=135    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1348   | /usr/lib/gnome-settings-daemon/gsd-print-notifications                                                                         
+2020/04/26 06:21:17 CMD: UID=121  PID=1344   | /usr/lib/gnome-settings-daemon/gsd-power                                                                                       
+2020/04/26 06:21:17 CMD: UID=121  PID=1341   | /usr/lib/gnome-settings-daemon/gsd-mouse                                                                                       
+2020/04/26 06:21:17 CMD: UID=0    PID=134    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1336   | /usr/lib/gnome-settings-daemon/gsd-media-keys                                                                                  
+2020/04/26 06:21:17 CMD: UID=121  PID=1332   | /usr/lib/gnome-settings-daemon/gsd-keyboard                                                                                    
+2020/04/26 06:21:17 CMD: UID=121  PID=1330   | /usr/lib/gnome-settings-daemon/gsd-housekeeping                                                                                
+2020/04/26 06:21:17 CMD: UID=121  PID=1327   | /usr/lib/gnome-settings-daemon/gsd-datetime                                                                                    
+2020/04/26 06:21:17 CMD: UID=121  PID=1324   | /usr/lib/gnome-settings-daemon/gsd-color                                                                                       
+2020/04/26 06:21:17 CMD: UID=121  PID=1321   | /usr/lib/gnome-settings-daemon/gsd-clipboard                                                                                   
+2020/04/26 06:21:17 CMD: UID=121  PID=1318   | /usr/lib/gnome-settings-daemon/gsd-a11y-settings                                                                               
+2020/04/26 06:21:17 CMD: UID=121  PID=1316   | /usr/lib/gnome-settings-daemon/gsd-xsettings                                                                                   
+2020/04/26 06:21:17 CMD: UID=0    PID=1312   | /usr/lib/packagekit/packagekitd 
+2020/04/26 06:21:17 CMD: UID=0    PID=131    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=1309   | /usr/lib/x86_64-linux-gnu/boltd 
+2020/04/26 06:21:17 CMD: UID=121  PID=1300   | /usr/libexec/xdg-permission-store 
+2020/04/26 06:21:17 CMD: UID=0    PID=130    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=13     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=129    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1289   | /usr/lib/ibus/ibus-portal 
+2020/04/26 06:21:17 CMD: UID=121  PID=1287   | /usr/lib/ibus/ibus-x11 --kill-daemon 
+2020/04/26 06:21:17 CMD: UID=121  PID=1284   | /usr/lib/ibus/ibus-dconf 
+2020/04/26 06:21:17 CMD: UID=121  PID=1281   | ibus-daemon --xim --panel disable 
+2020/04/26 06:21:17 CMD: UID=0    PID=128    | 
+2020/04/26 06:21:17 CMD: UID=109  PID=1270   | /usr/lib/rtkit/rtkit-daemon 
+2020/04/26 06:21:17 CMD: UID=0    PID=127    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1268   | /usr/bin/pulseaudio --daemonize=no 
+2020/04/26 06:21:17 CMD: UID=121  PID=1265   | /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session                                                                    
+2020/04/26 06:21:17 CMD: UID=121  PID=1263   | /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3                   
+2020/04/26 06:21:17 CMD: UID=0    PID=126    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1258   | /usr/lib/at-spi2-core/at-spi-bus-launcher                                                                                      
+2020/04/26 06:21:17 CMD: UID=0    PID=125    | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1248   | /usr/bin/Xwayland :1024 -rootless -terminate -accessx -core -listen 4 -listen 5 -displayfd 6                                   
+2020/04/26 06:21:17 CMD: UID=0    PID=124    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=123    | 
+2020/04/26 06:21:17 CMD: UID=0    PID=1210   | /usr/lib/upower/upowerd 
+2020/04/26 06:21:17 CMD: UID=121  PID=1203   | /usr/bin/gnome-shell 
+2020/04/26 06:21:17 CMD: UID=0    PID=12     | 
+2020/04/26 06:21:17 CMD: UID=121  PID=1181   | /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart                                       
+2020/04/26 06:21:17 CMD: UID=121  PID=1179   | /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only                      
+2020/04/26 06:21:17 CMD: UID=121  PID=1177   | /usr/lib/gdm3/gdm-wayland-session gnome-session --autostart /usr/share/gdm/greeter/autostart                                   
+2020/04/26 06:21:17 CMD: UID=121  PID=1153   | (sd-pam) 
+2020/04/26 06:21:17 CMD: UID=121  PID=1152   | /lib/systemd/systemd --user 
+2020/04/26 06:21:17 CMD: UID=122  PID=1147   | /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid                                                                 
+2020/04/26 06:21:17 CMD: UID=0    PID=1120   | /usr/sbin/apache2 -k start 
+2020/04/26 06:21:17 CMD: UID=0    PID=1105   | gdm-session-worker [pam/gdm-launch-environment]                                                                                
+2020/04/26 06:21:17 CMD: UID=0    PID=11     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=1093   | /usr/sbin/gdm3 
+2020/04/26 06:21:17 CMD: UID=0    PID=1092   | /usr/sbin/sshd -D 
+2020/04/26 06:21:17 CMD: UID=113  PID=1088   | /usr/sbin/kerneloops 
+2020/04/26 06:21:17 CMD: UID=113  PID=1078   | /usr/sbin/kerneloops --test 
+2020/04/26 06:21:17 CMD: UID=112  PID=1064   | /usr/bin/whoopsie -f 
+2020/04/26 06:21:17 CMD: UID=0    PID=1055   | /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal                                  
+2020/04/26 06:21:17 CMD: UID=0    PID=10     | 
+2020/04/26 06:21:17 CMD: UID=0    PID=1      | /sbin/init auto noprompt 
+
+## After create a new session via phpinject:
+2020/04/26 06:25:01 CMD: UID=0    PID=4600   | 
+2020/04/26 06:25:01 CMD: UID=0    PID=4597   | /usr/sbin/CRON -f 
+2020/04/26 06:26:16 CMD: UID=33   PID=4603   | /bin/sh -i 
+2020/04/26 06:26:16 CMD: UID=33   PID=4602   | sh -c /bin/sh -i 
+
+## (id=33 --> www-data)
+
+2020/04/26 06:27:15 CMD: UID=33   PID=4605   | python3 -c import pty; pty.spawn("/bin/sh") 
+2020/04/26 06:27:15 CMD: UID=33   PID=4606   | /bin/sh 
+
+## After su - theseus WTF
+2020/04/26 06:27:55 CMD: UID=33   PID=4608   | su - theseus 
+2020/04/26 06:27:59 CMD: UID=1000 PID=4612   | -su 
+2020/04/26 06:27:59 CMD: UID=1000 PID=4609   | -su 
+2020/04/26 06:27:59 CMD: UID=???  PID=4613   | ???
+
+
+## A cron execution:
+2020/04/26 06:35:01 CMD: UID=0    PID=4695   | 
+2020/04/26 06:35:01 CMD: UID=0    PID=4694   | /bin/sh -c rm -f /var/www/Magic/images/uploads/*.*.*                                                                           
+2020/04/26 06:35:01 CMD: UID=0    PID=4692   | /usr/sbin/CRON -f 
+
+## Another cron execution:
+2020/04/26 06:38:41 CMD: UID=0    PID=4707   | apt-config shell StateDir Dir::State/d 
+2020/04/26 06:38:41 CMD: UID=0    PID=4706   | /bin/sh /usr/lib/apt/apt.systemd.daily install                                                                                   
+2020/04/26 06:38:41 CMD: UID=???  PID=4708   | 
+2020/04/26 06:38:41 CMD: UID=0    PID=4710   | /bin/sh /usr/lib/apt/apt.systemd.daily lock_is_held install                                                                      
+2020/04/26 06:38:41 CMD: UID=0    PID=4713   | apt-config shell AutoAptEnable APT::Periodic::Enable                                                                             
+2020/04/26 06:38:41 CMD: UID=0    PID=4714   | 
+2020/04/26 06:38:41 CMD: UID=0    PID=4715   | apt-config shell VERBOSE APT::Periodic::Verbose                                                                                  
+2020/04/26 06:38:41 CMD: UID=0    PID=4718   | apt-get check -qq 
+2020/04/26 06:38:41 CMD: UID=???  PID=4720   | ???
+2020/04/26 06:38:42 CMD: UID=0    PID=4723   | 
+2020/04/26 06:38:42 CMD: UID=0    PID=4722   | apt-config shell UpdateInterval APT::Periodic::Update-Package-Lists                                                              
+2020/04/26 06:38:42 CMD: UID=0    PID=4724   | apt-config shell DownloadUpgradeableInterval APT::Periodic::Download-Upgradeable-Packages                                        
+2020/04/26 06:38:42 CMD: UID=0    PID=4726   | apt-config shell UnattendedUpgradeInterval APT::Periodic::Unattended-Upgrade                                                     
+2020/04/26 06:38:42 CMD: UID=0    PID=4727   | /usr/bin/dpkg --print-foreign-architectures                                                                                      
+2020/04/26 06:38:42 CMD: UID=0    PID=4728   | apt-config shell AutocleanInterval APT::Periodic::AutocleanInterval                                                              
+2020/04/26 06:38:42 CMD: UID=0    PID=4730   | apt-config shell CleanInterval APT::Periodic::CleanInterval                                                                      
+2020/04/26 06:38:42 CMD: UID=0    PID=4732   | apt-config shell BackupArchiveInterval APT::Periodic::BackupArchiveInterval                                                      
+2020/04/26 06:38:42 CMD: UID=0    PID=4733   | /usr/bin/dpkg --print-foreign-architectures                                                                                      
+2020/04/26 06:38:42 CMD: UID=0    PID=4734   | apt-config shell Debdelta APT::Periodic::Download-Upgradeable-Packages-Debdelta                                                  
+2020/04/26 06:38:42 CMD: UID=0    PID=4735   | 
+2020/04/26 06:38:42 CMD: UID=???  PID=4739   | ???
+2020/04/26 06:38:42 CMD: UID=0    PID=4741   | apt-config shell MaxAge APT::Archives::MaxAge                                                                                    
+2020/04/26 06:38:42 CMD: UID=0    PID=4743   | apt-config shell MaxAge APT::Periodic::MaxAge                                                                                    
+2020/04/26 06:38:42 CMD: UID=???  PID=4744   | ???
+2020/04/26 06:38:42 CMD: UID=0    PID=4745   | apt-config shell MinAge APT::Archives::MinAge                                                                                    
+2020/04/26 06:38:42 CMD: UID=0    PID=4746   | /usr/bin/dpkg --print-foreign-architectures                                                                                      
+2020/04/26 06:38:42 CMD: UID=0    PID=4747   | apt-config shell MinAge APT::Periodic::MinAge                                                                                    
+2020/04/26 06:38:42 CMD: UID=0    PID=4748   | /usr/bin/dpkg --print-foreign-architectures                                                                                      
+2020/04/26 06:38:42 CMD: UID=0    PID=4749   | apt-config shell MaxSize APT::Archives::MaxSize                                                                                  
+2020/04/26 06:38:42 CMD: UID=0    PID=4751   | apt-config shell MaxSize APT::Periodic::MaxSize                                                                                  
+2020/04/26 06:38:42 CMD: UID=0    PID=4752   | /usr/bin/dpkg --print-foreign-architectures                                                                                      
+2020/04/26 06:38:42 CMD: UID=0    PID=4753   | apt-config shell Cache Dir::Cache::archives/d                                                                                    
+2020/04/26 06:38:42 CMD: UID=???  PID=4754   | ???
+2020/04/26 06:38:42 CMD: UID=???  PID=4756   | ???
+2020/04/26 06:38:42 CMD: UID=0    PID=4755   | 
+2020/04/26 06:38:42 CMD: UID=0    PID=4757   | date --date=2020-04-26 +%s 
+2020/04/26 06:38:42 CMD: UID=0    PID=4760   | 
+[...]
+
+After executing sysinfo
+2020/04/26 07:17:24 CMD: UID=0    PID=5269   | sysinfo 
+2020/04/26 07:17:24 CMD: UID=0    PID=5271   | lshw -short 
+2020/04/26 07:17:24 CMD: UID=0    PID=5270   | sh -c lshw -short 
+2020/04/26 07:17:25 CMD: UID=0    PID=5276   | fdisk -l 
+2020/04/26 07:17:25 CMD: UID=0    PID=5275   | sh -c fdisk -l 
+2020/04/26 07:17:25 CMD: UID=0    PID=5277   | sh -c cat /proc/cpuinfo 
+2020/04/26 07:17:25 CMD: UID=0    PID=5279   | sh -c free -h 

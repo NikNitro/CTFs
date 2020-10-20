@@ -1,0 +1,41 @@
+dirb http://10.10.10.185
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sat Apr 25 18:32:35 2020
+URL_BASE: http://10.10.10.185/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://10.10.10.185/ ----
+==> DIRECTORY: http://10.10.10.185/images/
++ http://10.10.10.185/index.php (CODE:200|SIZE:4377)                     
++ http://10.10.10.185/server-status (CODE:403|SIZE:277)                  
+                                                                         
+---- Entering directory: http://10.10.10.185/assets/ ----
+==> DIRECTORY: http://10.10.10.185/assets/js/
+
+---- Entering directory: http://10.10.10.185/images/ ----
+==> DIRECTORY: http://10.10.10.185/images/uploads/
+
+---- Entering directory: http://10.10.10.185/assets/css/ ----
+==> DIRECTORY: http://10.10.10.185/assets/css/images/
+                                                                         
+---- Entering directory: http://10.10.10.185/assets/js/ ----
+                                                                                                                                                   
+---- Entering directory: http://10.10.10.185/images/uploads/ ----
+                                                                                                                                                   
+---- Entering directory: http://10.10.10.185/assets/css/images/ ----
+==> DIRECTORY: http://10.10.10.185/assets/css/images/ie/
+                                                                         
+---- Entering directory: http://10.10.10.185/assets/css/images/ie/ ----
+                                                                                                                                                         
+-----------------
+END_TIME: Sat Apr 25 19:03:56 2020
+DOWNLOADED: 36896 - FOUND: 2
