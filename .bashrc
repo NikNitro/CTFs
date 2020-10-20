@@ -99,6 +99,7 @@ alias clc='cd ~; clear'
 alias CTF='cd ~/CTFs'
 alias HTB='cd ~/CTFs/Writeups/eternals/HTB'
 alias venv='source ~/venv/bin/activate'
+alias ovpn='sudo openvpn ~/Downloads/NikNitrox.ovpn'
 
 #### Add some folders to the PATH
 PATH=$PATH:/home/kali/CTFs/library/common_scripts
