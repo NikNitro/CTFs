@@ -1,0 +1,254 @@
+# SED
+
+> With sed you can do all of the following:
+> Select text
+> Substitute text
+> Add lines to text
+> Delete lines from text
+> Modify (or preserve) an original file
+
+Note: -n is for silent mode (without printing of pattern space).
+
+## Selecting text
+
+Getting some lines from a file
+```
+kali@kali:/tmp$ sed -n '1,4p' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+```
+
+Using multiple selections (with -e or semicolon)
+```
+kali@kali:/tmp$ sed -n -e '1,2p' -e '4,6p' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+```
+```
+kali@kali:/tmp$ sed -n '1,2p;4,6p' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+```
+
+Getting even lines (using ~ instead of comma)
+> The number 2 means every second line, 3 means every third line, and so on.
+```
+kali@kali:/tmp$ sed -n -e '1~2p' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+```
+
+Regex filtering
+```
+kali@kali:/tmp$ sed -n '/bash$/p' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+postgres:x:120:125:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+kali:x:1000:1000:kali,,,:/home/kali:/bin/bash
+```
+
+## Substitutions
+
+```
+kali@kali:/tmp$ echo "Hello, World!" | sed 's/World/NikNitro/'
+Hello, NikNitro!
+```
+
+With p changes the first occurrence of each line
+```
+kali@kali:/tmp$ sed -n '/bash$/p' /etc/passwd | sed -n 's/o/a/p'
+raot:x:0:0:root:/root:/bin/bash
+pastgres:x:120:125:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+kali:x:1000:1000:kali,,,:/hame/kali:/bin/bash
+```
+
+With g changes all occurrences 
+```
+kali@kali:/tmp$ sed -n '/bash$/p' /etc/passwd | sed -n 's/o/a/pg'
+raat:x:0:0:raat:/raat:/bin/bash
+pastgres:x:120:125:PastgreSQL administratar,,,:/var/lib/pastgresql:/bin/bash
+kali:x:1000:1000:kali,,,:/hame/kali:/bin/bash
+```
+
+With i we set case insensitivity
+```
+kali@kali:/tmp$ sed -n '/bash$/p' /etc/passwd | sed -n 's/O/a/gpi'
+raat:x:0:0:raat:/raat:/bin/bash
+pastgres:x:120:125:PastgreSQL administratar,,,:/var/lib/pastgresql:/bin/bash
+kali:x:1000:1000:kali,,,:/hame/kali:/bin/bash
+```
+
+## Inserting text
+Find a text and append another one below the first with 'a', or above, with 'i'
+```
+kali@kali:/tmp$ sed '/bspc rule/a --> a rule' bspwmrc
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+--> a rule
+bspc rule -a Chromium desktop='^2'
+--> a rule
+bspc rule -a mplayer2 state=floating
+--> a rule
+bspc rule -a Kupfer.py focus=on
+--> a rule
+bspc rule -a Screenkey manage=off
+--> a rule
+
+kali@kali:/tmp$ sed '/bspc rule/i --> a rule' bspwmrc
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+--> a rule
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+--> a rule
+bspc rule -a Chromium desktop='^2'
+--> a rule
+bspc rule -a mplayer2 state=floating
+--> a rule
+bspc rule -a Kupfer.py focus=on
+--> a rule
+bspc rule -a Screenkey manage=off
+```
+
+We can also substitute and use the line found using &
+```
+kali@kali:/tmp$ sed 's/bspc rule/line: &/' bspwmrc
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+line: bspc rule -a Gimp desktop='^8' state=floating follow=on
+line: bspc rule -a Chromium desktop='^2'
+line: bspc rule -a mplayer2 state=floating
+line: bspc rule -a Kupfer.py focus=on
+line: bspc rule -a Screenkey manage=off
+```
+
+And add a blank line between each line (with 'G')
+```
+kali@kali:/tmp$ sed 'G' bspwmrc 
+#! /bin/sh
+
+
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+
+
+bspc config border_width         2
+
+bspc config window_gap          12
+```
+
+## Deleting lines
+Using d instead of p allow us to delete lines.
+```
+kali@kali:/tmp$ head bspwmrc 
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+kali@kali:/tmp$ head bspwmrc | sed '3,5d' 
+#! /bin/sh
+
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+```
+
+Using exclamation mark let us to delete every line not in the range.
+```
+kali@kali:/tmp$ head bspwmrc | sed '3,5!d' 
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+```
+
+## Saving changes
+Using flag 'i' we can save our original file with a new suffix.
+```
+kali@kali:/tmp$ sed -i'.bak' '/^bspc config/!d' bspwmrc 
+kali@kali:/tmp$ cat bspwmrc
+bspc config border_width         2
+bspc config window_gap          12
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+kali@kali:/tmp$ cat bspwmrc.bak 
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+```
+
+## Inserting a new line in the middle of a file.
+
+
+## Sources:
+https://www.howtogeek.com/666395/how-to-use-the-sed-command-on-linux/

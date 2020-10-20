@@ -133,6 +133,15 @@ irc 39
 gnats 41
 ```
 
+### Finding using patterns
+
+Put the pattern between slashes.
+```
+kali@kali:/tmp$ awk -F: '/bash/ {print $0}' /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+postgres:x:120:125:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+kali:x:1000:1000:kali,,,:/home/kali:/bin/bash
+```
 
 
 ## Sources:
