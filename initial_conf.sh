@@ -1,11 +1,11 @@
-#! /bin/bash
+#! /dev/null
 
-# Save current directory
+# Save current directory (inside CTFs)
 CURRENT_PATH=$(pwd)
 
 # Modify .bashrc
 rm ~/.bashrc
-ln -s .bashrc ~/.bashrc
+ln -s $CURRENT_PATH/.resources_init/.bashrc ~/.bashrc
 
 # Add apt repositories if there arent on "cat /etc/apt/sources.list"
 ## sudo tee -a /etc/apt/sources.list<<EOF
@@ -109,4 +109,84 @@ mkdir ~/.config/compton
 ln -s $CURRENT_PATH/.resources_init/compton.conf ~/.config/compton/compton.conf
 echo "In 30 seconds, the session will logout. Please select the bspwm theme before login again."
 sleep 30
-kill -9 -1
+#kill -9 -1
+
+## Installing Polybar (https://github.com/polybar/polybar/wiki/Compiling)
+### Install all dependencies
+sudo apt install build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev -y
+### Install all optionals dependencies 
+sudo apt install libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev i3-wm libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y
+### Download repo v3.4.tar
+cd /opt/
+sudo wget https://github.com/jaagr/polybar/releases/download/3.4.0/polybar-3.4.0.tar
+sudo tar -xf polybar-3.4.0.tar 
+sudo rm polybar-3.4.0.tar 
+sudo mkdir build
+cd build
+sudo cmake ..
+sudo make -j$(nproc)
+sudo make install
+### Create the polybar config files
+mkdir ~/.config/polybar
+ln -s $CURRENT_PATH/.resources_init/polybar_launch.sh ~/.config/polybar/launch.sh
+ln -s $CURRENT_PATH/.resources_init/polybar_config ~/.config/polybar/config
+### Add launch.sh to the bspwmrc file
+sed -i '/wmname LG3D &$/a~/.config/polybar/launch.sh &' ~/.config/bspwm/bspwmrc
+
+## Install Hack Nerd Fonts
+sudo unzip $CURRENT_PATH/.resources_init/HackNerdFont.zip -d /usr/local/share/fonts/
+
+## Install CrackMapExec
+cd /opt
+sudo git clone https://github.com/byt3bl33d3r/CrackMapExec.git
+
+## Install zsh
+sudo apt-get install zsh -y
+
+### Install Powerlevel10k and configure it
+sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+
+ln -s $CURRENT_PATH/.resources_init/p10k_conf.zsh ~/.p10k.zsh
+sudo ln -s $CURRENT_PATH/.resources_init/p10k_conf.zsh /root/.p10k.zsh
+
+sudo usermod --shell /usr/bin/zsh kali
+sudo usermod --shell /usr/bin/zsh root
+
+sudo mv ~/.zshrc ~/.zshrc.bak
+sudo ln -s $CURRENT_PATH/.resources_init/.zshrc ~/.zshrc
+sudo mv /root/.zshrc /root/.zshrc.bak
+sudo ln -s /home/kali/.zshrc /root/.zshrc
+
+### Install zsh plugins
+sudo apt-get install zsh-autosuggestions -y
+sudo apt-get install zsh-syntax-highlighting -y
+sudo chown kali:kali -R /usr/share/zsh-syntax-highlighting
+sudo chown kali:kali -R /usr/share/zsh-autosuggestions
+
+
+## Install LSD
+### A better ls
+cd /tmp
+wget https://github.com/Peltoche/lsd/releases/download/0.14.0/lsd_0.14.0_amd64.deb
+sudo dpkg -i lsd_0.14.0_amd64.deb
+
+## Install bat
+### A better cat
+sudo apt install bat
+
+## Install fzf
+### A good finder for CLI (https://github.com/junegunn/fzf)
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+
+## Install another tools
+### scrub, for file deleting
+sudo apt-get install scrub -y
+
+### i3lock-fancy
+### imagemagick
+sudo apt-get install i3lock-fancy imagemagick -y
+
+
