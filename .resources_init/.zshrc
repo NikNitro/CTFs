@@ -7,7 +7,8 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Manual configurations
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/kali/CTFs/library/common_scripts:/opt/binaries
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:
+PATH=$PATH:~/CTFs/library/common_scripts:/opt/binaries
 ## Jumping between words with ctrl + arrows
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
