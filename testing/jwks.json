@@ -4,9 +4,6 @@
             "k":"ZmFudGFzdGljand0",
             "kty":"oct",
             "kid":"0001"
-        },
-        {
-            "kid": "none"
         }
     ]
 }
