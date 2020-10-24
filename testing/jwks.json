@@ -1,9 +1,9 @@
 {
-    "keys": [
-        {
-            "k":"ZmFudGFzdGljand0",
-            "kty":"oct",
-            "kid":"0001"
-        }
-    ]
+  "keys": [
+    {
+      "e": "65537",
+      "kty": "RSA",
+      "n": "161"
+    }
+  ]
 }
