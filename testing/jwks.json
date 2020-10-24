@@ -1,7 +1,8 @@
 {
   "keys": [
     {
-      "e": "NjU1Mzc=",
+      "kid": "test",
+      "e": "AQAB",
       "kty": "RSA",
       "n": "161"
     }
