@@ -18,6 +18,9 @@ sudo apt-get update
 # Install net-tools
 sudo apt-get install net-tools -y
  
+# Install build-essentials
+sudo apt-get install build-essential
+
 # Install Python stuff
 pip3 install virtualenv
 echo "Virtualenv installed:"
@@ -31,6 +34,13 @@ cd /opt/
 sudo git clone https://github.com/jpillora/chisel.git
 cd chisel/
 sudo go build
+
+# Install sublime-text
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
 
 # Configure bash (Thanks S4vitar - https://www.youtube.com/watch?v=MF4qRSedmEs)
 ## Install rofi
@@ -106,6 +116,7 @@ ln -s $CURRENT_PATH/.resources_init/compton.conf ~/.config/compton/compton.conf
 ## Installing Polybar (https://github.com/polybar/polybar/wiki/Compiling)
 ### Install all dependencies
 sudo apt install build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev -y
+# If python3-xcbgen, install python-xcbgen
 ### Install all optionals dependencies 
 sudo apt install libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev i3-wm libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y
 ### Download repo v3.4.tar
@@ -113,6 +124,7 @@ cd /opt/
 sudo wget https://github.com/jaagr/polybar/releases/download/3.4.0/polybar-3.4.0.tar
 sudo tar -xf polybar-3.4.0.tar 
 sudo rm polybar-3.4.0.tar 
+cd polybar
 sudo mkdir build
 cd build
 sudo cmake ..
@@ -169,7 +181,15 @@ sudo dpkg -i lsd_0.14.0_amd64.deb
 
 ## Install bat
 ### A better cat
-sudo apt install bat
+    # In debian and some other SO's, bat is not in the repo.
+    # sudo apt install bat
+curl -s -L https://github.com/sharkdp/bat/releases/latest \
+| grep "/sharkdp/.*/bat_[0-9\.]*_amd64.deb" \
+| cut -d '"' -f 2 \
+| sed 's/^/https:\/\/github.com/' \
+| wget -P /tmp -qi -
+
+sudo dpkg -i /tmp/bat*.deb
 
 ## Install fzf
 ### A good finder for CLI (https://github.com/junegunn/fzf)
