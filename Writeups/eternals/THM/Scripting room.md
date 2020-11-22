@@ -36,6 +36,7 @@ General Approach(it's best to do this using the sockets library in Python):
 * Send an operation
 * View response and continue
 
+Here we have the script solution: 
     import socket
     import time
     
@@ -81,7 +82,7 @@ General Approach(it's best to do this using the sockets library in Python):
             pass
         finally:
             s.close
-    
+        
         time.sleep(4)
 
 Result:
