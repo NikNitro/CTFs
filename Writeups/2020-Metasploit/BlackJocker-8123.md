@@ -31,13 +31,13 @@ Let's go to the /hint page.
 
 Here, if we give a valid email, it return us a password hint.  
 Let's try with our admin email:  
-![images\4-1.png](images\4-1.png)
+![images/4-1.png](images/4-1.png)
 
 ihatesalt. 9 chars. No, it doesn't work, but we are close.  
 
 Opening burp for seeing this request, we can see the next in our response:  
 
-![images\4-2.png](images\4-2.png)
+![images/4-2.png](images/4-2.png)
 
 So, we have now two ways:  
 - Trying to send the id in order to find more users, and a weaker password.  
@@ -47,12 +47,12 @@ The first way fails, so let's crack the hash:
 
 Crackstation, hashcrack and others websites fails, but they don't have the first 9 characters.  
 With crunch, I've created a password dictionary with all posibilities of the password policy, begining with our “ihatesalt”. You can use your own script or crunch:  
-![images\4-3.png](images\4-3.png) 
+![images/4-3.png](images/4-3.png) 
 
 We have a dict of more than 62 millions words. It's insane for hydra, but perfect for hashcat.  
 Saving the hash in a file called “8123.hash”, we run hydra and:  
-![images\4-4.png](images\4-4.png) 
+![images/4-4.png](images/4-4.png) 
 
 It's all. Now go to the /admin page with your credentials to get the flag :)  
 
-![images\4-5.png](images\4-5.png)
+![images/4-5.png](images/4-5.png)
